@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
 {
-    public partial class Form1 : Form
+    public partial class ChamberBackgroundForm : Form
     {
-        public Form1()
+        public ChamberBackgroundForm()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
     }
 }

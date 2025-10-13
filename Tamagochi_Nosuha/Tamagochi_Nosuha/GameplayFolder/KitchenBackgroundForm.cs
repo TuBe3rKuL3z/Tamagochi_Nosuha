@@ -17,5 +17,17 @@ namespace Tamagochi_Nosuha
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
         }
+        private void btn_MainBackgroundForm_Click(object sender, EventArgs e)
+        {
+            MainBackgroundForm mainBackgroundForm = new MainBackgroundForm();
+            mainBackgroundForm.Show();
+        }
+
+        private void btn_Pause_Click(object sender, EventArgs e)
+        {
+            PauseForm pauseForm = new PauseForm();
+            pauseForm.Show();
+        }
+
     }
 }

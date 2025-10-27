@@ -21,13 +21,40 @@ namespace Tamagochi_Nosuha
         private void btn_Pause_Click(object sender, EventArgs e)
         {
             PauseForm pauseForm = new PauseForm();
-            pauseForm.Show();
+            pauseForm.ShowDialog();
         }
 
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
             KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
-            kitchenBackgroundForm.Show();
+            kitchenBackgroundForm.ShowDialog();
+        }
+
+        private void btn_MainBackgroundForm_Click(object sender, EventArgs e)
+        {
+            MainBackgroundForm mainBackgroundForm = new MainBackgroundForm();
+            mainBackgroundForm.ShowDialog();
+        }
+
+        private void btn_GameRoomBackgroundForm_Click(object sender, EventArgs e)
+        {
+            GameRoomBackgroundForm gameRoomBackgroundForm = new GameRoomBackgroundForm();
+            gameRoomBackgroundForm.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_BedroomBackgroundForm_Click(object sender, EventArgs e)
+        {
+            BedroomBackgroundForm bedroomBackgroundForm = new BedroomBackgroundForm();
+            bedroomBackgroundForm.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_BathroomBackgroundForm_Click(object sender, EventArgs e)
+        {
+            BathroomBackgroundForm bathroomBackgroundForm = new BathroomBackgroundForm();
+            bathroomBackgroundForm.ShowDialog();
+            this.Close();
         }
     }
 }

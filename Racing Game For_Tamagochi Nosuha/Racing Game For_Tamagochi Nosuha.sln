@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Racing Game For_Tamagochi Nosuha", "Racing Game For_Tamagochi Nosuha\Racing Game For_Tamagochi Nosuha.csproj", "{8BC87E23-0688-414F-BF7E-AB22E15CBBA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BC87E23-0688-414F-BF7E-AB22E15CBBA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC87E23-0688-414F-BF7E-AB22E15CBBA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC87E23-0688-414F-BF7E-AB22E15CBBA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC87E23-0688-414F-BF7E-AB22E15CBBA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24FFC483-B324-4A4C-84D6-E98172F88362}
+	EndGlobalSection
+EndGlobal

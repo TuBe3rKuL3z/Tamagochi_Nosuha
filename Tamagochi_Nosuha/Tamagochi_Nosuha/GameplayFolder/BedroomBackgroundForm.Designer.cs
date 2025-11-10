@@ -64,6 +64,7 @@
             this.btn_BathroomBackgroundForm.TabIndex = 13;
             this.btn_BathroomBackgroundForm.Text = "BathroomBackgroundForm";
             this.btn_BathroomBackgroundForm.UseVisualStyleBackColor = true;
+            this.btn_BathroomBackgroundForm.Click += new System.EventHandler(this.btn_BathroomBackgroundForm_Click);
             // 
             // btn_ChamberBackgroundForm
             // 
@@ -73,6 +74,7 @@
             this.btn_ChamberBackgroundForm.TabIndex = 11;
             this.btn_ChamberBackgroundForm.Text = "ChamberBackgroundForm";
             this.btn_ChamberBackgroundForm.UseVisualStyleBackColor = true;
+            this.btn_ChamberBackgroundForm.Click += new System.EventHandler(this.btn_ChamberBackgroundForm_Click);
             // 
             // btn_GameRoomBackgroundForm
             // 
@@ -82,6 +84,7 @@
             this.btn_GameRoomBackgroundForm.TabIndex = 10;
             this.btn_GameRoomBackgroundForm.Text = "GameRoomBackgroundForm";
             this.btn_GameRoomBackgroundForm.UseVisualStyleBackColor = true;
+            this.btn_GameRoomBackgroundForm.Click += new System.EventHandler(this.btn_GameRoomBackgroundForm_Click);
             // 
             // btn_KitchenBackgroundForm
             // 
@@ -101,6 +104,7 @@
             this.btn_MainBackgroundForm.TabIndex = 8;
             this.btn_MainBackgroundForm.Text = "MainBackgroundForm";
             this.btn_MainBackgroundForm.UseVisualStyleBackColor = true;
+            this.btn_MainBackgroundForm.Click += new System.EventHandler(this.btn_MainBackgroundForm_Click);
             // 
             // BedroomBackgroundForm
             // 

@@ -13,11 +13,14 @@ namespace Tamagochi_Nosuha
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+<<<<<<< HEAD
             this.Load += new EventHandler(MainBackgroundForm_Load);
         }
         private void MainBackgroundForm_Load(object sender, EventArgs e)
         {
             InitializeAnimation();
+=======
+>>>>>>> 2ba5efa7df161ba836dbaaf83d954a6a1fe2f749
         }
 
         private void btn_Pause_Click(object sender, EventArgs e)
@@ -55,6 +58,7 @@ namespace Tamagochi_Nosuha
             bathroomBackgroundForm.ShowDialog();
             this.Close();
         }
+<<<<<<< HEAD
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -112,5 +116,8 @@ namespace Tamagochi_Nosuha
         }
 
 
+=======
+                
+>>>>>>> 2ba5efa7df161ba836dbaaf83d954a6a1fe2f749
     }
 }

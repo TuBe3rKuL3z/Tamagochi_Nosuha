@@ -20,7 +20,7 @@ namespace Tamagochi_Nosuha
             CurrentStatus = Status.Normal;
 
             hungerTimer = new Timer();
-            hungerTimer.Interval = 15000; // 30 сек | 300000 - 5 мин
+            hungerTimer.Interval = 10000; // 30 сек | 300000 - 5 мин
             hungerTimer.Tick += (s, e) => SetStatus(Status.Hungry);
 
             boredomTimer = new Timer();

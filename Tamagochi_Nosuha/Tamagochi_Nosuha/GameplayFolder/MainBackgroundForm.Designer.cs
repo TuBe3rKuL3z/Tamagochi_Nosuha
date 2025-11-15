@@ -37,6 +37,15 @@
             this.btn_BedroomBackgroundForm = new System.Windows.Forms.Button();
             this.btn_ChamberBackgroundForm = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+<<<<<<< HEAD
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+=======
+>>>>>>> 2ba5efa7df161ba836dbaaf83d954a6a1fe2f749
             this.SuspendLayout();
             // 
             // label1
@@ -117,12 +126,47 @@
             // 
             // timer1
             // 
+<<<<<<< HEAD
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(450, 255);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(450, 255);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(536, 184);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(151, 126);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+=======
+>>>>>>> 2ba5efa7df161ba836dbaaf83d954a6a1fe2f749
             // 
             // MainBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+=======
             this.ClientSize = new System.Drawing.Size(1067, 554);
+>>>>>>> 2ba5efa7df161ba836dbaaf83d954a6a1fe2f749
             this.Controls.Add(this.btn_BathroomBackgroundForm);
             this.Controls.Add(this.btn_BedroomBackgroundForm);
             this.Controls.Add(this.btn_ChamberBackgroundForm);
@@ -134,6 +178,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainBackgroundForm";
             this.Text = "MainBackgroundForm";
+            this.Load += new System.EventHandler(this.MainBackgroundForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +197,11 @@
         private System.Windows.Forms.Button btn_BedroomBackgroundForm;
         private System.Windows.Forms.Button btn_ChamberBackgroundForm;
         private System.Windows.Forms.Timer timer1;
+<<<<<<< HEAD
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+=======
+>>>>>>> 2ba5efa7df161ba836dbaaf83d954a6a1fe2f749
     }
 }

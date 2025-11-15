@@ -119,5 +119,55 @@ namespace Tamagochi_Nosuha.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nos_eat__1_ {
+            get {
+                object obj = ResourceManager.GetObject("nos_eat (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nos_eat__2_ {
+            get {
+                object obj = ResourceManager.GetObject("nos_eat (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nos_eat__3_ {
+            get {
+                object obj = ResourceManager.GetObject("nos_eat (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] Nosuha_Eats {
+            get {
+                object obj = ResourceManager.GetObject("Nosuha_Eats", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] Nosuha_Standart {
+            get {
+                object obj = ResourceManager.GetObject("Nosuha_Standart", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

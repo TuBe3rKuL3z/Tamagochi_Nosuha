@@ -1,6 +1,8 @@
-﻿using System;
+﻿using AnimationTest2;
+using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
-using AnimationTest2;
 
 namespace Tamagochi_Nosuha
 {
@@ -10,6 +12,8 @@ namespace Tamagochi_Nosuha
         private AgeSystem ageSystem;
         private NeedSystem needSystem;
         private Animator animator;
+        private string videoPath;
+
 
         public MainBackgroundForm()
         {
@@ -33,7 +37,37 @@ namespace Tamagochi_Nosuha
             //Запуск
             gameTime.StartTime();
             needSystem.StartNeeds();
+
+            SetupVideoPlayer();
+            this.TransparencyKey = Color.White;
         }
+
+        private void SetupVideoPlayer()
+        {
+            axWindowsMediaPlayer1.settings.setMode("loop", true);
+            axWindowsMediaPlayer1.uiMode = "none";
+            axWindowsMediaPlayer1.stretchToFit = true;
+            axWindowsMediaPlayer1.Dock = DockStyle.None;
+            //axWindowsMediaPlayer1.
+
+            // Дополнительные настройки чтобы скрыть всё
+            axWindowsMediaPlayer1.settings.autoStart = true;
+            axWindowsMediaPlayer1.enableContextMenu = false;
+
+            // Загрузка видео
+            videoPath = Path.GetTempFileName() + ".mp4";
+            File.WriteAllBytes(videoPath, Properties.Resources.Nosuha_Standart);
+            axWindowsMediaPlayer1.URL = videoPath;
+        }
+
+
+        // Удаляем временный файл при закрытии
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            try { File.Delete(videoPath); } catch { }
+            base.OnFormClosed(e);
+        }
+
 
 
         //Время
@@ -106,8 +140,12 @@ namespace Tamagochi_Nosuha
         //кормить
         private void btnFeed_Click(object sender, EventArgs e)
         {
+            string age = "baby";
+            string status = "eat";
+
             needSystem.Feed();
             ageSystem.AddProgress();
+            animator.PlayAnimation(age, status);
         }
 
         //МЫть
@@ -125,5 +163,6 @@ namespace Tamagochi_Nosuha
             ageSystem.AddProgress();
 
         }
+
     }
 }

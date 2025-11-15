@@ -49,8 +49,10 @@ namespace AnimationTest2
             switch (stateKey)
             {
                 case "baby_hungry":
-                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_2, Tamagochi_Nosuha.Properties.Resources.dead_2, Tamagochi_Nosuha.Properties.Resources.dead_2 };
-                 case "baby_bored":
+                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_2, Tamagochi_Nosuha.Properties.Resources.dead_2, Tamagochi_Nosuha.Properties.Resources.dead_2,  };
+                case "baby_eat":
+                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.nos_eat__2_, Tamagochi_Nosuha.Properties.Resources.nos_eat__3_, Tamagochi_Nosuha.Properties.Resources.nos_eat__1_, };
+                case "baby_bored":
                      return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_3, Tamagochi_Nosuha.Properties.Resources.dead_3, Tamagochi_Nosuha.Properties.Resources.dead_3 };
                  case "baby_dirty":
                      return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_1, Tamagochi_Nosuha.Properties.Resources.dead_1, Tamagochi_Nosuha.Properties.Resources.dead_1 };

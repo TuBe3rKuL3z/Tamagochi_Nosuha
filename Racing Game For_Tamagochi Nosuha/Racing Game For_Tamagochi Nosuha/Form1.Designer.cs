@@ -61,9 +61,10 @@
             this.btnAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgain.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAgain.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAgain.Location = new System.Drawing.Point(165, 359);
+            this.btnAgain.Location = new System.Drawing.Point(220, 442);
+            this.btnAgain.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgain.Name = "btnAgain";
-            this.btnAgain.Size = new System.Drawing.Size(250, 34);
+            this.btnAgain.Size = new System.Drawing.Size(333, 42);
             this.btnAgain.TabIndex = 5;
             this.btnAgain.Text = "Начать занаво";
             this.btnAgain.UseVisualStyleBackColor = false;
@@ -76,9 +77,10 @@
             this.labelLose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelLose.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelLose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLose.Location = new System.Drawing.Point(158, 218);
+            this.labelLose.Location = new System.Drawing.Point(211, 268);
+            this.labelLose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLose.Name = "labelLose";
-            this.labelLose.Size = new System.Drawing.Size(270, 42);
+            this.labelLose.Size = new System.Drawing.Size(337, 52);
             this.labelLose.TabIndex = 6;
             this.labelLose.Text = "Вы проиграли!";
             // 
@@ -88,9 +90,10 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBack.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBack.Location = new System.Drawing.Point(165, 319);
+            this.btnBack.Location = new System.Drawing.Point(220, 393);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(250, 34);
+            this.btnBack.Size = new System.Drawing.Size(333, 42);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Вернутся к Носухе";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -100,10 +103,10 @@
             this.EnemyCar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.EnemyCar2.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_3;
             this.EnemyCar2.ErrorImage = null;
-            this.EnemyCar2.Location = new System.Drawing.Point(421, -240);
-            this.EnemyCar2.Margin = new System.Windows.Forms.Padding(2);
+            this.EnemyCar2.Location = new System.Drawing.Point(561, -295);
+            this.EnemyCar2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnemyCar2.Name = "EnemyCar2";
-            this.EnemyCar2.Size = new System.Drawing.Size(100, 130);
+            this.EnemyCar2.Size = new System.Drawing.Size(133, 160);
             this.EnemyCar2.TabIndex = 4;
             this.EnemyCar2.TabStop = false;
             this.EnemyCar2.WaitOnLoad = true;
@@ -113,10 +116,10 @@
             this.EnemyCar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.EnemyCar1.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_3;
             this.EnemyCar1.ErrorImage = null;
-            this.EnemyCar1.Location = new System.Drawing.Point(30, -130);
-            this.EnemyCar1.Margin = new System.Windows.Forms.Padding(2);
+            this.EnemyCar1.Location = new System.Drawing.Point(40, -160);
+            this.EnemyCar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnemyCar1.Name = "EnemyCar1";
-            this.EnemyCar1.Size = new System.Drawing.Size(100, 130);
+            this.EnemyCar1.Size = new System.Drawing.Size(133, 160);
             this.EnemyCar1.TabIndex = 3;
             this.EnemyCar1.TabStop = false;
             this.EnemyCar1.WaitOnLoad = true;
@@ -126,10 +129,10 @@
             this.PlayerCar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PlayerCar.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_2;
             this.PlayerCar.ErrorImage = null;
-            this.PlayerCar.Location = new System.Drawing.Point(298, 496);
-            this.PlayerCar.Margin = new System.Windows.Forms.Padding(2);
+            this.PlayerCar.Location = new System.Drawing.Point(397, 610);
+            this.PlayerCar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PlayerCar.Name = "PlayerCar";
-            this.PlayerCar.Size = new System.Drawing.Size(100, 130);
+            this.PlayerCar.Size = new System.Drawing.Size(133, 160);
             this.PlayerCar.TabIndex = 1;
             this.PlayerCar.TabStop = false;
             this.PlayerCar.WaitOnLoad = true;
@@ -139,10 +142,10 @@
             this.RoadPictureBox.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Doroga_2;
             this.RoadPictureBox.ErrorImage = null;
             this.RoadPictureBox.InitialImage = null;
-            this.RoadPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.RoadPictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.RoadPictureBox.Location = new System.Drawing.Point(1, 0);
+            this.RoadPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RoadPictureBox.Name = "RoadPictureBox";
-            this.RoadPictureBox.Size = new System.Drawing.Size(568, 650);
+            this.RoadPictureBox.Size = new System.Drawing.Size(757, 800);
             this.RoadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RoadPictureBox.TabIndex = 0;
             this.RoadPictureBox.TabStop = false;
@@ -151,10 +154,10 @@
             // 
             this.RoadPictureBox2.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Doroga_2;
             this.RoadPictureBox2.InitialImage = null;
-            this.RoadPictureBox2.Location = new System.Drawing.Point(0, -650);
-            this.RoadPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.RoadPictureBox2.Location = new System.Drawing.Point(0, -800);
+            this.RoadPictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RoadPictureBox2.Name = "RoadPictureBox2";
-            this.RoadPictureBox2.Size = new System.Drawing.Size(568, 650);
+            this.RoadPictureBox2.Size = new System.Drawing.Size(757, 800);
             this.RoadPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RoadPictureBox2.TabIndex = 2;
             this.RoadPictureBox2.TabStop = false;
@@ -163,9 +166,10 @@
             // 
             this.Coin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Coin.Image = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.money;
-            this.Coin.Location = new System.Drawing.Point(270, 138);
+            this.Coin.Location = new System.Drawing.Point(360, 170);
+            this.Coin.Margin = new System.Windows.Forms.Padding(4);
             this.Coin.Name = "Coin";
-            this.Coin.Size = new System.Drawing.Size(32, 32);
+            this.Coin.Size = new System.Drawing.Size(43, 39);
             this.Coin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Coin.TabIndex = 8;
             this.Coin.TabStop = false;
@@ -177,9 +181,10 @@
             this.labelCoins.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelCoins.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelCoins.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelCoins.Location = new System.Drawing.Point(12, 9);
+            this.labelCoins.Location = new System.Drawing.Point(16, 11);
+            this.labelCoins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCoins.Name = "labelCoins";
-            this.labelCoins.Size = new System.Drawing.Size(115, 26);
+            this.labelCoins.Size = new System.Drawing.Size(147, 31);
             this.labelCoins.TabIndex = 9;
             this.labelCoins.Text = "Монеты: 0";
             // 
@@ -190,18 +195,19 @@
             this.labelScore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelScore.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelScore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelScore.Location = new System.Drawing.Point(12, 44);
+            this.labelScore.Location = new System.Drawing.Point(16, 54);
+            this.labelScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(80, 26);
+            this.labelScore.Size = new System.Drawing.Size(100, 31);
             this.labelScore.TabIndex = 10;
             this.labelScore.Text = "Счет: 0";
             // 
             // RacingGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(568, 650);
+            this.ClientSize = new System.Drawing.Size(757, 800);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.labelCoins);
             this.Controls.Add(this.Coin);
@@ -214,12 +220,13 @@
             this.Controls.Add(this.RoadPictureBox);
             this.Controls.Add(this.RoadPictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RacingGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RacingGame";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RacingGame_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RacingGame_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RacingGame_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.EnemyCar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EnemyCar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerCar)).EndInit();

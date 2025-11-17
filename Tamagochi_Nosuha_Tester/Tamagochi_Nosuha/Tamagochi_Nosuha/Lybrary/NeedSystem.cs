@@ -5,7 +5,7 @@ namespace Tamagochi_Nosuha
 {
     public class NeedSystem
     {
-        public enum Status { Normal, Hungry, Bored, Dirty, Sleepy, Sick, Happy }
+        public enum Status { Normal, Hungry, Bored, Dirty, Sleepy, Sick, Happy, Washes, Eat, Sleep, Treatment }
 
         public Status CurrentStatus { get; private set; }
 
@@ -20,15 +20,15 @@ namespace Tamagochi_Nosuha
             CurrentStatus = Status.Normal;
 
             hungerTimer = new Timer();
-            hungerTimer.Interval = 10000; // 30 сек | 300000 - 5 мин
+            hungerTimer.Interval = 2000; // | 300000 - 5 мин
             hungerTimer.Tick += (s, e) => SetStatus(Status.Hungry);
 
             boredomTimer = new Timer();
-            boredomTimer.Interval = 180000; // 30 сек | 180000 - 3 мин
+            boredomTimer.Interval = 180000; // | 180000 - 3 мин
             boredomTimer.Tick += (s, e) => SetStatus(Status.Bored);
 
             dirtTimer = new Timer();
-            dirtTimer.Interval = 420000; // 30 сек | 420000 - 7 мин
+            dirtTimer.Interval = 80000; // | 420000 - 7 мин
             dirtTimer.Tick += (s, e) => SetStatus(Status.Dirty);
         }
 
@@ -47,9 +47,18 @@ namespace Tamagochi_Nosuha
 
         public void Feed()
         {
-            if (CurrentStatus == Status.Hungry)
+            hungerTimer.Stop();
+
+            SetStatus(Status.Eat);
+
+            var eatTimer = new Timer();
+            eatTimer.Interval = 3000; 
+            eatTimer.Tick += (s, e) => {
                 SetStatus(Status.Normal);
-            ResetTimer(hungerTimer);
+                ResetTimer(hungerTimer);
+                eatTimer.Stop();
+            };
+            eatTimer.Start();;
         }
 
         public void Play()
@@ -61,9 +70,18 @@ namespace Tamagochi_Nosuha
 
         public void Clean()
         {
-            if (CurrentStatus == Status.Dirty)
+            dirtTimer.Stop();
+
+            SetStatus(Status.Washes);
+
+            var washTimer = new Timer();
+            washTimer.Interval = 4400;
+            washTimer.Tick += (s, e) => {
                 SetStatus(Status.Normal);
-            ResetTimer(dirtTimer);
+                ResetTimer(dirtTimer);
+                washTimer.Stop();
+            };
+            washTimer.Start();
         }
 
         public void Sleep()
@@ -96,6 +114,8 @@ namespace Tamagochi_Nosuha
             };
             happyTimer.Start();
         }
+
+        
     }
 
 }

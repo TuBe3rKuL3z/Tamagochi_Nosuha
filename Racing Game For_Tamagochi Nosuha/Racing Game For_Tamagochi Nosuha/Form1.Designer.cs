@@ -129,7 +129,7 @@
             this.PlayerCar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PlayerCar.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_2;
             this.PlayerCar.ErrorImage = null;
-            this.PlayerCar.Location = new System.Drawing.Point(397, 610);
+            this.PlayerCar.Location = new System.Drawing.Point(560, 352);
             this.PlayerCar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PlayerCar.Name = "PlayerCar";
             this.PlayerCar.Size = new System.Drawing.Size(133, 160);

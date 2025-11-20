@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
@@ -10,66 +11,69 @@ namespace Tamagochi_Nosuha
         public Status CurrentStatus { get; private set; }
 
         private Timer hungerTimer;
-        private Timer boredomTimer;
         private Timer dirtTimer;
 
         public event Action<Status> OnStatusChanged;
 
+        // Для паузы
+        private List<Timer> allTimers;
+        private bool isPaused = false;
+        private Dictionary<Timer, int> timerIntervals; //Сохраняем интервалы таймеров
+
+
+
         public NeedSystem()
         {
             CurrentStatus = Status.Normal;
+            allTimers = new List<Timer>();
+            timerIntervals = new Dictionary<Timer, int>();
 
             hungerTimer = new Timer();
-            hungerTimer.Interval = 2000; // | 300000 - 5 мин
+            hungerTimer.Interval = 5000; // | 300000 - 5 мин
             hungerTimer.Tick += (s, e) => SetStatus(Status.Hungry);
-
-            boredomTimer = new Timer();
-            boredomTimer.Interval = 180000; // | 180000 - 3 мин
-            boredomTimer.Tick += (s, e) => SetStatus(Status.Bored);
+            allTimers.Add(hungerTimer); //Добавление в лист таймеров
+            timerIntervals[hungerTimer] = hungerTimer.Interval;
 
             dirtTimer = new Timer();
-            dirtTimer.Interval = 80000; // | 420000 - 7 мин
+            dirtTimer.Interval = 2000; // | 420000 - 7 мин
             dirtTimer.Tick += (s, e) => SetStatus(Status.Dirty);
+            //allTimers.Add(dirtTimer);
+            //timerIntervals[dirtTimer] = dirtTimer.Interval;
+
+
         }
 
-        public void StartNeeds()
-        {
-            hungerTimer.Start();
-            boredomTimer.Start();
-            dirtTimer.Start();
-        }
 
-        public void SetStatus(Status newStatus)
-        {
-            CurrentStatus = newStatus;
-            OnStatusChanged?.Invoke(newStatus);
-        }
 
+        #region Изменение состояний
         public void Feed()
         {
+            PauseAllTimers();
             hungerTimer.Stop();
 
             SetStatus(Status.Eat);
 
             var eatTimer = new Timer();
-            eatTimer.Interval = 3000; 
+            eatTimer.Interval = 2800; 
             eatTimer.Tick += (s, e) => {
                 SetStatus(Status.Normal);
-                ResetTimer(hungerTimer);
+                //ResetTimer(hungerTimer);
                 eatTimer.Stop();
+                ResumeAllTimers();
             };
-            eatTimer.Start();;
+            eatTimer.Start();
         }
 
         public void Play()
         {
-            if (CurrentStatus == Status.Bored)
-                SetStatus(Status.Normal);
-            ResetTimer(boredomTimer);
+            //if (CurrentStatus == Status.Bored)
+            //    SetStatus(Status.Normal);
+            //ResetTimer(boredomTimer);
         }
 
         public void Clean()
         {
+            PauseAllTimers();
             dirtTimer.Stop();
 
             SetStatus(Status.Washes);
@@ -78,8 +82,10 @@ namespace Tamagochi_Nosuha
             washTimer.Interval = 4400;
             washTimer.Tick += (s, e) => {
                 SetStatus(Status.Normal);
-                ResetTimer(dirtTimer);
+                //ResetTimer(dirtTimer);
                 washTimer.Stop();
+                ResumeAllTimers();
+                
             };
             washTimer.Start();
         }
@@ -111,11 +117,50 @@ namespace Tamagochi_Nosuha
             happyTimer.Tick += (s, e) => {
                 SetStatus(Status.Normal);
                 happyTimer.Stop();
+                ResumeAllTimers();
             };
             happyTimer.Start();
         }
 
-        
-    }
+        #endregion
 
+        public void StartNeeds()
+        {
+            hungerTimer.Start();
+            dirtTimer.Start();
+        }
+
+        public void SetStatus(Status newStatus)
+        {
+            CurrentStatus = newStatus;
+            OnStatusChanged?.Invoke(newStatus);
+        }
+
+        //Метод для паузы
+        private void PauseAllTimers()
+        {
+            if (isPaused) return; // Уже на паузе
+
+            isPaused = true;
+            foreach (var timer in allTimers)
+            {
+                if (timer.Enabled)
+                {
+                    timer.Stop();
+                }
+            }
+        }
+
+        //Метод для возобновления
+        private void ResumeAllTimers()
+        {
+            if (!isPaused) return;
+
+            isPaused = false;
+            foreach (var timer in allTimers)
+            {
+                timer.Start();
+            }
+        }
+    }
 }

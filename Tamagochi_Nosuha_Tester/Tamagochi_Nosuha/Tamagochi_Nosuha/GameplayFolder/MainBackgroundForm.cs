@@ -1,8 +1,5 @@
 ﻿using AnimationTest2;
 using System;
-using System.Drawing;
-using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
@@ -18,6 +15,7 @@ namespace Tamagochi_Nosuha
         public MainBackgroundForm()
         {
             InitializeComponent();
+            MethodOfButton();
             this.WindowState = FormWindowState.Maximized;
 
             gameTime = new GameTime();
@@ -71,7 +69,7 @@ namespace Tamagochi_Nosuha
         }
 
 
-        #region Кнопки для перехода меж комнат
+        #region Кнопки для перехода
         private void btn_Pause_Click(object sender, EventArgs e)
         {
             PauseForm pauseForm = new PauseForm();
@@ -110,7 +108,7 @@ namespace Tamagochi_Nosuha
 
         #endregion
 
-
+        #region Кнопки действия
         //кормить
         private void btnFeed_Click(object sender, EventArgs e)
         {
@@ -133,5 +131,10 @@ namespace Tamagochi_Nosuha
             ageSystem.AddProgress();
 
         }
+        private void MethodOfButton()
+        {
+            btn_MainBackgroundForm.Enabled = false;
+        }
+        #endregion
     }
 }

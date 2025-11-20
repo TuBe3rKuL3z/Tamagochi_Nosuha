@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
@@ -15,15 +8,11 @@ namespace Tamagochi_Nosuha
         public ChamberBackgroundForm()
         {
             InitializeComponent();
+            MethodOfButton();
             WindowState = FormWindowState.Maximized;
         }
 
-        private void btn_Pause_Click(object sender, EventArgs e)
-        {
-            PauseForm pauseForm = new PauseForm();
-            pauseForm.ShowDialog();
-        }
-
+        #region Кнопки перемещения
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
             KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
@@ -56,5 +45,28 @@ namespace Tamagochi_Nosuha
             bathroomBackgroundForm.ShowDialog();
             this.Close();
         }
+        #endregion
+
+        private void btn_Pause_Click(object sender, EventArgs e)
+        {
+            PauseForm pauseForm = new PauseForm();
+            pauseForm.ShowDialog();
+        }
+
+        #region Кнопки действия
+        private void btnTreatment_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void MethodOfButton()
+        {
+            btn_ChamberBackgroundForm.Enabled = false;
+            btnClean.Enabled = false;
+            btnFeed.Enabled = false;
+            btnSleep.Enabled = false;
+            btnPlay.Enabled = false;
+        }
+
+        #endregion
     }
 }

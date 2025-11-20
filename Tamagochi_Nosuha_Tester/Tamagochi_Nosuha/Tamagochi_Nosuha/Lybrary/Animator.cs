@@ -50,13 +50,10 @@ namespace AnimationTest2
             switch (stateKey)
             {
                 case "baby_hungry":
-                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_2, Tamagochi_Nosuha.Properties.Resources.dead_2, Tamagochi_Nosuha.Properties.Resources.dead_2,  };
+                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__1_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__2_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__3_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__4_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__5_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__6_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__7_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__8_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__9_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Hungry__10_};
                 case "baby_eat":
-                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.nos_eat__2_, Tamagochi_Nosuha.Properties.Resources.nos_eat__3_, Tamagochi_Nosuha.Properties.Resources.nos_eat__1_, };
+                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__1_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__2_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__3_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__4_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__5_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__6_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Eat__7_ };
 
-                case "baby_bored":
-                     return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_3, Tamagochi_Nosuha.Properties.Resources.dead_3, Tamagochi_Nosuha.Properties.Resources.dead_3 };
-                
                 case "baby_dirty":
                      return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__1_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__2_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__3_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__4_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__5_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__6_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__7_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__8_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__9_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha_Dirty__10_};
                 case "baby_washes":
@@ -67,16 +64,17 @@ namespace AnimationTest2
                 case "baby_sleep":
                     return new List<Image> { };
 
-
                 case "baby_sick":
                      return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Ch1, Tamagochi_Nosuha.Properties.Resources.Ch2, Tamagochi_Nosuha.Properties.Resources.Ch3 };
                 case "baby_treatment":
                     return new List<Image> { };
 
                 case "baby_normal":
-                     return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Ch1, Tamagochi_Nosuha.Properties.Resources.Ch2, Tamagochi_Nosuha.Properties.Resources.Ch3 };
+                     return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__1_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__2_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__3_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__4_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__5_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__6_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__7_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__8_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__9_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__10_ };
+                case "baby_bored":
+                     return new List<Image> { Tamagochi_Nosuha.Properties.Resources.dead_3, Tamagochi_Nosuha.Properties.Resources.dead_3, Tamagochi_Nosuha.Properties.Resources.dead_3 };
                 case "baby_happy":
-                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Ch1, Tamagochi_Nosuha.Properties.Resources.Ch2, Tamagochi_Nosuha.Properties.Resources.Ch3 };
+                    return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__1_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__2_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__3_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__4_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__5_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__6_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__7_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__8_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__9_, Tamagochi_Nosuha.Properties.Resources.Standart_Nosuha__10_ };
 
                 /*// ADULT состояния
                 case "adult_hungry":

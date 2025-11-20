@@ -12,18 +12,15 @@ namespace Tamagochi_Nosuha
 {
     public partial class GameRoomBackgroundForm : Form
     {
+
         public GameRoomBackgroundForm()
         {
             InitializeComponent();
+            MethodOfButton();
             WindowState = FormWindowState.Maximized;
         }
 
-        private void btn_Pause_Click(object sender, EventArgs e)
-        {
-            PauseForm pauseForm = new PauseForm();
-            pauseForm.ShowDialog();
-        }
-
+        #region Кнопки перемещения
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
             KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
@@ -58,5 +55,29 @@ namespace Tamagochi_Nosuha
             bathroomBackgroundForm.ShowDialog();
             this.Close();
         }
+        #endregion
+
+        private void btn_Pause_Click(object sender, EventArgs e)
+        {
+            PauseForm pauseForm = new PauseForm();
+            pauseForm.ShowDialog();
+        }
+
+        #region Кнопки действия
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MethodOfButton()
+        {
+            btn_GameRoomBackgroundForm.Enabled = false;
+            btnClean.Enabled = false;
+            btnFeed.Enabled = false;
+            btnSleep.Enabled = false;
+            btnTreatment.Enabled = false;
+        }
+
+        #endregion
     }
 }

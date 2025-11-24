@@ -35,14 +35,15 @@
             this.btn_GameRoomBackgroundForm = new System.Windows.Forms.Button();
             this.btn_KitchenBackgroundForm = new System.Windows.Forms.Button();
             this.btn_MainBackgroundForm = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBathRoom = new System.Windows.Forms.PictureBox();
             this.btnSleep = new System.Windows.Forms.Button();
             this.btnTreatment = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnFeed = new System.Windows.Forms.Button();
             this.btn_BathroomBackgroundForm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblMessage = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBathRoom)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,15 +115,15 @@
             this.btn_MainBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_MainBackgroundForm.Click += new System.EventHandler(this.btn_MainBackgroundForm_Click);
             // 
-            // pictureBox1
+            // pictureBoxBathRoom
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(288, 80);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 179);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxBathRoom.Location = new System.Drawing.Point(288, 80);
+            this.pictureBoxBathRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxBathRoom.Name = "pictureBoxBathRoom";
+            this.pictureBoxBathRoom.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxBathRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBathRoom.TabIndex = 24;
+            this.pictureBoxBathRoom.TabStop = false;
             // 
             // btnSleep
             // 
@@ -184,18 +185,28 @@
             this.btn_BathroomBackgroundForm.Text = "BathroomBackgroundForm";
             this.btn_BathroomBackgroundForm.UseVisualStyleBackColor = true;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(566, 44);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(35, 13);
+            this.lblMessage.TabIndex = 38;
+            this.lblMessage.Text = "label2";
+            // 
             // BathroomBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_BathroomBackgroundForm);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnFeed);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxBathRoom);
             this.Controls.Add(this.btn_BedroomBackgroundForm);
             this.Controls.Add(this.btn_ChamberBackgroundForm);
             this.Controls.Add(this.btn_GameRoomBackgroundForm);
@@ -206,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BathroomBackgroundForm";
             this.Text = "BathroomBackgroundForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBathRoom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,12 +232,13 @@
         private System.Windows.Forms.Button btn_GameRoomBackgroundForm;
         private System.Windows.Forms.Button btn_KitchenBackgroundForm;
         private System.Windows.Forms.Button btn_MainBackgroundForm;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxBathRoom;
         private System.Windows.Forms.Button btnSleep;
         private System.Windows.Forms.Button btnTreatment;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnFeed;
         private System.Windows.Forms.Button btn_BathroomBackgroundForm;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
@@ -23,16 +16,16 @@ namespace Tamagochi_Nosuha
         #region Кнопки перемещения
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
-            KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
-            kitchenBackgroundForm.ShowDialog();
-            this.Close();
+            //KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
+            //kitchenBackgroundForm.ShowDialog();
+            //this.Close();
         }
 
         private void btn_MainBackgroundForm_Click(object sender, EventArgs e)
         {
-            KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
-            kitchenBackgroundForm.ShowDialog();
-            this.Close();
+            //KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
+            //kitchenBackgroundForm.ShowDialog();
+            //this.Close();
         }
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
@@ -44,16 +37,16 @@ namespace Tamagochi_Nosuha
 
         private void btn_BedroomBackgroundForm_Click(object sender, EventArgs e)
         {
-            BedroomBackgroundForm bedroomBackgroundForm = new BedroomBackgroundForm();
-            bedroomBackgroundForm.ShowDialog();
-            this.Close();
+            //BedroomBackgroundForm bedroomBackgroundForm = new BedroomBackgroundForm();
+            //bedroomBackgroundForm.ShowDialog();
+            //this.Close();
         }
 
         private void btn_BathroomBackgroundForm_Click(object sender, EventArgs e)
         {
-            BathroomBackgroundForm bathroomBackgroundForm = new BathroomBackgroundForm();
-            bathroomBackgroundForm.ShowDialog();
-            this.Close();
+            //BathroomBackgroundForm bathroomBackgroundForm = new BathroomBackgroundForm();
+            //bathroomBackgroundForm.ShowDialog();
+            //this.Close();
         }
         #endregion
 

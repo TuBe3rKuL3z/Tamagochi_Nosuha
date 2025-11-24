@@ -190,6 +190,7 @@
             this.btnSleep.TabIndex = 16;
             this.btnSleep.Text = "Спать";
             this.btnSleep.UseVisualStyleBackColor = true;
+            this.btnSleep.Click += new System.EventHandler(this.btnSleep_Click);
             // 
             // btnTreatment
             // 

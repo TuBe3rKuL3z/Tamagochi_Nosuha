@@ -40,9 +40,10 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnFeed = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxKitchen = new System.Windows.Forms.PictureBox();
             this.btn_KitchenBackgroundForm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblMessage = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKitchen)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Pause
@@ -165,15 +166,15 @@
             this.btnFeed.UseVisualStyleBackColor = true;
             this.btnFeed.Click += new System.EventHandler(this.btnFeed_Click);
             // 
-            // pictureBox1
+            // pictureBoxKitchen
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(283, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 179);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxKitchen.Location = new System.Drawing.Point(283, 100);
+            this.pictureBoxKitchen.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxKitchen.Name = "pictureBoxKitchen";
+            this.pictureBoxKitchen.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxKitchen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxKitchen.TabIndex = 22;
+            this.pictureBoxKitchen.TabStop = false;
             // 
             // btn_KitchenBackgroundForm
             // 
@@ -184,13 +185,23 @@
             this.btn_KitchenBackgroundForm.Text = "KitchenBackgroundForm";
             this.btn_KitchenBackgroundForm.UseVisualStyleBackColor = true;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(566, 70);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(35, 13);
+            this.lblMessage.TabIndex = 24;
+            this.lblMessage.Text = "label2";
+            // 
             // KitchenBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_KitchenBackgroundForm);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxKitchen);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);
             this.Controls.Add(this.btnPlay);
@@ -206,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "KitchenBackgroundForm";
             this.Text = "KitchenBackgroundForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKitchen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +237,8 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnFeed;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxKitchen;
         private System.Windows.Forms.Button btn_KitchenBackgroundForm;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

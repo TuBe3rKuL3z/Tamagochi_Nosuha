@@ -40,9 +40,10 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnFeed = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBedRoom = new System.Windows.Forms.PictureBox();
             this.btn_BedroomBackgroundForm = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblMessage = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBedRoom)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -165,15 +166,15 @@
             this.btnFeed.Text = "Покормить";
             this.btnFeed.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureBoxBedRoom
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(301, 76);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 179);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxBedRoom.Location = new System.Drawing.Point(301, 76);
+            this.pictureBoxBedRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxBedRoom.Name = "pictureBoxBedRoom";
+            this.pictureBoxBedRoom.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxBedRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBedRoom.TabIndex = 32;
+            this.pictureBoxBedRoom.TabStop = false;
             // 
             // btn_BedroomBackgroundForm
             // 
@@ -184,13 +185,23 @@
             this.btn_BedroomBackgroundForm.Text = "BedroomBackgroundForm";
             this.btn_BedroomBackgroundForm.UseVisualStyleBackColor = true;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(572, 44);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(35, 13);
+            this.lblMessage.TabIndex = 34;
+            this.lblMessage.Text = "label2";
+            // 
             // BedroomBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_BedroomBackgroundForm);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxBedRoom);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);
             this.Controls.Add(this.btnPlay);
@@ -206,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BedroomBackgroundForm";
             this.Text = "BedroomBackgroundForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBedRoom)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +237,8 @@
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnFeed;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxBedRoom;
         private System.Windows.Forms.Button btn_BedroomBackgroundForm;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

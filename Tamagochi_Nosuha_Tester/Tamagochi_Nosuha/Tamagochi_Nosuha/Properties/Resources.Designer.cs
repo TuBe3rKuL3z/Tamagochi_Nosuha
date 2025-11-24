@@ -493,6 +493,256 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__14_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__15_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleep__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleep (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sleepy__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sleepy (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Standart_Nosuha_Washes__1_ {
             get {
                 object obj = ResourceManager.GetObject("Standart_Nosuha_Washes (1)", resourceCulture);

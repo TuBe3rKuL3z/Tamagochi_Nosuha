@@ -16,8 +16,8 @@ namespace Tamagochi_Nosuha
         #region Кнопки перемещения
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
-            //KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
-            //kitchenBackgroundForm.ShowDialog();
+            //KitchenBackgroundForm kitchenForm = new KitchenBackgroundForm(needSystem, ageSystem, gameTime);
+            //kitchenForm.ShowDialog();
             //this.Close();
         }
 
@@ -30,9 +30,9 @@ namespace Tamagochi_Nosuha
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
         {
-            ChamberBackgroundForm chamberBackgroundForm = new ChamberBackgroundForm();
-            chamberBackgroundForm.ShowDialog();
-            this.Close();
+            //ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem, gameTime);
+            //chamberForm.ShowDialog();
+            //this.Close();
         }
 
         private void btn_BedroomBackgroundForm_Click(object sender, EventArgs e)

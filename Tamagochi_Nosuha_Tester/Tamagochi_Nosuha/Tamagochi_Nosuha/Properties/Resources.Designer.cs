@@ -19,7 +19,7 @@ namespace Tamagochi_Nosuha.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -93,6 +93,16 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chamber_Background {
+            get {
+                object obj = ResourceManager.GetObject("Chamber_Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dead_1 {
             get {
                 object obj = ResourceManager.GetObject("dead_1", resourceCulture);
@@ -116,6 +126,66 @@ namespace Tamagochi_Nosuha.Properties {
         internal static System.Drawing.Bitmap dead_3 {
             get {
                 object obj = ResourceManager.GetObject("dead_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grave__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Grave (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grave__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Grave (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grave__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Grave (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grave__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Grave (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grave__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Grave (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grave__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Grave (6)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +556,106 @@ namespace Tamagochi_Nosuha.Properties {
         internal static System.Drawing.Bitmap Standart_Nosuha_Hungry__9_ {
             get {
                 object obj = ResourceManager.GetObject("Standart_Nosuha_Hungry (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Standart_Nosuha_Sick__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Standart_Nosuha_Sick (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

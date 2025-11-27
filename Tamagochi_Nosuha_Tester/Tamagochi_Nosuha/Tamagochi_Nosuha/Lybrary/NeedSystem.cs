@@ -32,68 +32,95 @@ namespace Tamagochi_Nosuha
 
         // Флаг блокировки для анимаций
         private bool isInAnimation = false;
-        private Queue<Status> pendingStatuses = new Queue<Status>();
+
+        // Добавляем новые поля для отслеживания болезни
+        private DateTime? sicknessStartTime = null;
+        private Timer deathFromSicknessTimer;
+        private int sicknessDeathTime = 15000; // 30 секунд
 
         // Событие при изменении списка состояний
         public event Action<List<Status>> OnStatusesChanged;
+        
+        // Добавляем событие смерти от болезни
+        public event Action OnDeathFromSickness;
 
         public NeedSystem()
         {
             InitializeTimers();
+            InitializeDeathTimer();
         }
 
         private void InitializeTimers()
         {
-            // Таймер голода
+            // Таймер голода - управляет ТОЛЬКО голодом
             hungerTimer = new Timer();
             hungerTimer.Interval = hungerInterval;
             hungerTimer.Tick += (s, e) => {
-                if (!isInAnimation)
+                if (!isInAnimation && !ActiveStatuses.Contains(Status.Eat))
                     AddStatus(Status.Hungry);
-                else
-                    pendingStatuses.Enqueue(Status.Hungry);
             };
 
-            // Таймер грязи
+            // Таймер грязи - управляет ТОЛЬКО грязью
             dirtTimer = new Timer();
             dirtTimer.Interval = dirtInterval;
             dirtTimer.Tick += (s, e) => {
-                if (!isInAnimation)
+                if (!isInAnimation && !ActiveStatuses.Contains(Status.Washes))
                     AddStatus(Status.Dirty);
-                else
-                    pendingStatuses.Enqueue(Status.Dirty);
             };
 
-            // Таймер сонливости
+            // Таймер сонливости - управляет ТОЛЬКО сонливостью
             sleepyTimer = new Timer();
             sleepyTimer.Interval = sleepyInterval;
             sleepyTimer.Tick += (s, e) => {
-                if (!isInAnimation)
+                if (!isInAnimation && !ActiveStatuses.Contains(Status.Sleep))
                     AddStatus(Status.Sleepy);
-                else
-                    pendingStatuses.Enqueue(Status.Sleepy);
             };
 
-            // Таймер болезни (случайная болезнь)
+            // Таймер болезни (случайная болезнь) - управляет ТОЛЬКО болезнью
             sickTimer = new Timer();
             sickTimer.Interval = sickInterval;
             sickTimer.Tick += (s, e) => {
-                if (new Random().Next(0, 100) < 30) // 30% шанс заболеть
+                if (new Random().Next(0, 100) < 100 && !isInAnimation && !ActiveStatuses.Contains(Status.Treatment)) // 30% шанс заболеть
                 {
-                    if (!isInAnimation)
-                        AddStatus(Status.Sick);
-                    else
-                        pendingStatuses.Enqueue(Status.Sick);
+                    AddStatus(Status.Sick);
                 }
             };
+        }
+
+        private void InitializeDeathTimer()
+        {
+            deathFromSicknessTimer = new Timer();
+            deathFromSicknessTimer.Interval = 1000; // Проверяем каждую секунду
+            deathFromSicknessTimer.Tick += (s, e) => CheckSicknessDeath();
+        }
+
+        private void CheckSicknessDeath()
+        {
+            if (ActiveStatuses.Contains(Status.Sick) && sicknessStartTime.HasValue)
+            {
+                // Проверяем, прошло ли 30 секунд с начала болезни
+                if ((DateTime.Now - sicknessStartTime.Value).TotalMilliseconds >= sicknessDeathTime)
+                {
+                    deathFromSicknessTimer.Stop();
+                    OnDeathFromSickness?.Invoke();
+                }
+            }
         }
 
         // Добавление состояния в список
         public void AddStatus(Status status)
         {
-            if (!ActiveStatuses.Contains(status) && !isInAnimation)
+            if (!ActiveStatuses.Contains(status))
             {
                 ActiveStatuses.Add(status);
+                
+                // Если добавили болезнь - запоминаем время начала
+                if (status == Status.Sick && !sicknessStartTime.HasValue)
+                {
+                    sicknessStartTime = DateTime.Now;
+                    deathFromSicknessTimer.Start();
+                }
+                
                 OnStatusesChanged?.Invoke(ActiveStatuses);
             }
         }
@@ -104,22 +131,16 @@ namespace Tamagochi_Nosuha
             if (ActiveStatuses.Contains(status))
             {
                 ActiveStatuses.Remove(status);
+                
+                // Если вылечили болезнь - сбрасываем таймер смерти
+                if (status == Status.Sick)
+                {
+                    sicknessStartTime = null;
+                    deathFromSicknessTimer.Stop();
+                }
+                
                 OnStatusesChanged?.Invoke(ActiveStatuses);
             }
-        }
-
-        // Обработка отложенных состояний после анимации
-        private void ProcessPendingStatuses()
-        {
-            while (pendingStatuses.Count > 0)
-            {
-                var status = pendingStatuses.Dequeue();
-                if (!ActiveStatuses.Contains(status))
-                {
-                    ActiveStatuses.Add(status);
-                }
-            }
-            OnStatusesChanged?.Invoke(ActiveStatuses);
         }
 
         #region Методы действий
@@ -131,9 +152,14 @@ namespace Tamagochi_Nosuha
                 isInAnimation = true;
 
                 // Временно показываем анимацию еды
-                var tempStatus = ActiveStatuses.ToList();
+                var previousStatuses = ActiveStatuses.Where(s => s != Status.Hungry).ToList();
                 ActiveStatuses.Clear();
                 ActiveStatuses.Add(Status.Eat);
+                // Сохраняем другие активные состояния кроме голода
+                foreach (var status in previousStatuses)
+                {
+                    ActiveStatuses.Add(status);
+                }
                 OnStatusesChanged?.Invoke(ActiveStatuses);
 
                 var eatTimer = new Timer();
@@ -141,12 +167,11 @@ namespace Tamagochi_Nosuha
                 eatTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Eat);
                     RemoveStatus(Status.Hungry);
-                    ResetTimer(hungerTimer);
+                    ResetTimer(hungerTimer); // Сбрасываем ТОЛЬКО таймер голода
                     eatTimer.Stop();
 
-                    // Разблокируем и обрабатываем отложенные состояния
+                    // Разблокируем
                     isInAnimation = false;
-                    ProcessPendingStatuses();
                 };
                 eatTimer.Start();
             }
@@ -158,9 +183,15 @@ namespace Tamagochi_Nosuha
             {
                 isInAnimation = true;
 
-                var tempStatus = ActiveStatuses.ToList();
+                // Сохраняем другие активные состояния кроме грязи
+                var previousStatuses = ActiveStatuses.Where(s => s != Status.Dirty).ToList();
                 ActiveStatuses.Clear();
                 ActiveStatuses.Add(Status.Washes);
+                // Сохраняем другие активные состояния
+                foreach (var status in previousStatuses)
+                {
+                    ActiveStatuses.Add(status);
+                }
                 OnStatusesChanged?.Invoke(ActiveStatuses);
 
                 var washTimer = new Timer();
@@ -168,11 +199,10 @@ namespace Tamagochi_Nosuha
                 washTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Washes);
                     RemoveStatus(Status.Dirty);
-                    ResetTimer(dirtTimer);
+                    ResetTimer(dirtTimer); // Сбрасываем ТОЛЬКО таймер грязи
                     washTimer.Stop();
 
                     isInAnimation = false;
-                    ProcessPendingStatuses();
                 };
                 washTimer.Start();
             }
@@ -184,9 +214,15 @@ namespace Tamagochi_Nosuha
             {
                 isInAnimation = true;
 
-                var tempStatus = ActiveStatuses.ToList();
+                // Сохраняем другие активные состояния кроме сонливости
+                var previousStatuses = ActiveStatuses.Where(s => s != Status.Sleepy).ToList();
                 ActiveStatuses.Clear();
                 ActiveStatuses.Add(Status.Sleep);
+                // Сохраняем другие активные состояния
+                foreach (var status in previousStatuses)
+                {
+                    ActiveStatuses.Add(status);
+                }
                 OnStatusesChanged?.Invoke(ActiveStatuses);
 
                 var sleepTimer = new Timer();
@@ -194,11 +230,10 @@ namespace Tamagochi_Nosuha
                 sleepTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Sleep);
                     RemoveStatus(Status.Sleepy);
-                    ResetTimer(sleepyTimer);
+                    ResetTimer(sleepyTimer); // Сбрасываем ТОЛЬКО таймер сонливости
                     sleepTimer.Stop();
 
                     isInAnimation = false;
-                    ProcessPendingStatuses();
                 };
                 sleepTimer.Start();
             }
@@ -210,9 +245,15 @@ namespace Tamagochi_Nosuha
             {
                 isInAnimation = true;
 
-                var tempStatus = ActiveStatuses.ToList();
+                // Сохраняем другие активные состояния кроме болезни
+                var previousStatuses = ActiveStatuses.Where(s => s != Status.Sick).ToList();
                 ActiveStatuses.Clear();
                 ActiveStatuses.Add(Status.Treatment);
+                // Сохраняем другие активные состояния
+                foreach (var status in previousStatuses)
+                {
+                    ActiveStatuses.Add(status);
+                }
                 OnStatusesChanged?.Invoke(ActiveStatuses);
 
                 var treatmentTimer = new Timer();
@@ -220,11 +261,10 @@ namespace Tamagochi_Nosuha
                 treatmentTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Treatment);
                     RemoveStatus(Status.Sick);
-                    ResetTimer(sickTimer);
+                    ResetTimer(sickTimer); // Сбрасываем ТОЛЬКО таймер болезни
                     treatmentTimer.Stop();
 
                     isInAnimation = false;
-                    ProcessPendingStatuses();
                 };
                 treatmentTimer.Start();
             }
@@ -254,27 +294,39 @@ namespace Tamagochi_Nosuha
             sickTimer.Start();
         }
 
+        // Добавляем метод остановки всех таймеров
+        public void StopAllTimers()
+        {
+            hungerTimer.Stop();
+            dirtTimer.Stop();
+            sleepyTimer.Stop();
+            sickTimer.Stop();
+            deathFromSicknessTimer.Stop();
+        }
+
         // Получение приоритетного состояния для анимации
         public Status GetPriorityStatus()
         {
+            // Сначала проверяем анимационные статусы
+            if (ActiveStatuses.Contains(Status.Eat)) return Status.Eat;
+            if (ActiveStatuses.Contains(Status.Washes)) return Status.Washes;
+            if (ActiveStatuses.Contains(Status.Sleep)) return Status.Sleep;
+            if (ActiveStatuses.Contains(Status.Treatment)) return Status.Treatment;
+            
+            // Затем проверяем проблемные статусы
             if (ActiveStatuses.Contains(Status.Sick)) return Status.Sick;
             if (ActiveStatuses.Contains(Status.Hungry)) return Status.Hungry;
             if (ActiveStatuses.Contains(Status.Dirty)) return Status.Dirty;
             if (ActiveStatuses.Contains(Status.Sleepy)) return Status.Sleepy;
             if (ActiveStatuses.Contains(Status.Bored)) return Status.Bored;
-            if (ActiveStatuses.Contains(Status.Eat)) return Status.Eat;
-            if (ActiveStatuses.Contains(Status.Washes)) return Status.Washes;
-            if (ActiveStatuses.Contains(Status.Sleep)) return Status.Sleep;
-            if (ActiveStatuses.Contains(Status.Treatment)) return Status.Treatment;
+            
             return Status.Normal;
         }
 
         public void SetSleepyFromNight()
         {
-            if (!isInAnimation)
+            if (!isInAnimation && !ActiveStatuses.Contains(Status.Sleep))
                 AddStatus(Status.Sleepy);
-            else
-                pendingStatuses.Enqueue(Status.Sleepy);
         }
     }
 }

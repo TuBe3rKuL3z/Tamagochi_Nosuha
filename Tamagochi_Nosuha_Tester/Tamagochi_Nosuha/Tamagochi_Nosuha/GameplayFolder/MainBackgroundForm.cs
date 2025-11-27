@@ -29,6 +29,7 @@ namespace Tamagochi_Nosuha
             gameTime.OnTimeChanged += UpdateTimeDisplay;
             ageSystem.OnAgeChanged += OnAgeChanged;
             needSystem.OnStatusesChanged += OnStatusesChanged;
+            needSystem.OnDeathFromSickness += OnDeathFromSickness;
 
             // Запускаем первую анимацию
             UpdateAnimation();
@@ -48,6 +49,43 @@ namespace Tamagochi_Nosuha
             {
                 needSystem.SetSleepyFromNight(); // вместо needSystem.AddStatus(NeedSystem.Status.Sleepy)
             }
+        }
+
+        // Обработчик смерти от болезни
+        private void OnDeathFromSickness()
+        {
+            // Останавливаем все таймеры
+            gameTime.StopTime();
+            needSystem.StopAllTimers();
+
+            // Устанавливаем смерть в AgeSystem
+            ageSystem.SetDead();
+
+            // Обновляем анимацию на смерть
+            UpdateAnimation();
+
+            // Блокируем все кнопки
+            BlockAllButtons();
+
+            // Показываем сообщение о смерти
+            MessageBox.Show("Питомец умер от болезни! Игра окончена.", "Смерть",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void BlockAllButtons()
+        {
+            btn_KitchenBackgroundForm.Enabled = false;
+            btn_BathroomBackgroundForm.Enabled = false;
+            btn_BedroomBackgroundForm.Enabled = false;
+            btn_ChamberBackgroundForm.Enabled = false;
+            btn_GameRoomBackgroundForm.Enabled = false;
+
+            // Блокируем кнопки действий
+            btnFeed.Enabled = false;
+            btnClean.Enabled = false;
+            btnPlay.Enabled = false;
+            btnSleep.Enabled = false;
+            btnTreatment.Enabled = false;
         }
 
 
@@ -84,8 +122,8 @@ namespace Tamagochi_Nosuha
             // Спальня - красная если сонный
             btn_BedroomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sleepy) ? Color.Red : Color.LightGray;
 
-            //// Больница - красная если болен
-            //btn_ChamberBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sick) ? Color.Red : Color.LightGray;
+            //Больница - красная если болен
+            btn_ChamberBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sick) ? Color.Red : Color.LightGray;
 
             //// Игровая - красная если скучно
             //btn_GameRoomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Bored) ? Color.Red : Color.LightGray;
@@ -102,7 +140,6 @@ namespace Tamagochi_Nosuha
         {
             KitchenBackgroundForm kitchenForm = new KitchenBackgroundForm(needSystem, ageSystem, gameTime);
             kitchenForm.ShowDialog();
-            // Убираем this.Close() - главная форма остается открытой
         }
 
         private void btn_GameRoomBackgroundForm_Click(object sender, EventArgs e)
@@ -113,8 +150,8 @@ namespace Tamagochi_Nosuha
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
         {
-            //ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem);
-            //chamberForm.ShowDialog();
+            ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem, gameTime);
+            chamberForm.ShowDialog();
         }
 
         private void btn_BedroomBackgroundForm_Click(object sender, EventArgs e)
@@ -133,32 +170,47 @@ namespace Tamagochi_Nosuha
         #region Кнопки действия (можно оставить для быстрых действий)
         private void btnFeed_Click(object sender, EventArgs e)
         {
-            needSystem.Feed();
-            ageSystem.AddProgress();
+            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
+            {
+                needSystem.Feed();
+                ageSystem.AddProgress();
+            }
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-            needSystem.Clean();
-            ageSystem.AddProgress();
+            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
+            {
+                needSystem.Clean();
+                ageSystem.AddProgress();
+            }
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            needSystem.Play();
-            ageSystem.AddProgress();
+            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
+            {
+                needSystem.Play();
+                ageSystem.AddProgress();
+            }
         }
 
         private void btnSleep_Click(object sender, EventArgs e)
         {
-            needSystem.Sleep();
-            ageSystem.AddProgress();
+            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
+            {
+                needSystem.Sleep();
+                ageSystem.AddProgress();
+            }
         }
 
         private void btnTreatment_Click(object sender, EventArgs e)
         {
-            needSystem.Heal();
-            ageSystem.AddProgress();
+            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
+            {
+                needSystem.Heal();
+                ageSystem.AddProgress();
+            }
         }
 
         private void MethodOfButton()

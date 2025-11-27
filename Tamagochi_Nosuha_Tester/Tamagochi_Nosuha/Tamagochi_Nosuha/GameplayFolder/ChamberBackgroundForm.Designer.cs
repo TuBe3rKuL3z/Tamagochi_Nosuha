@@ -35,13 +35,16 @@
             this.btn_GameRoomBackgroundForm = new System.Windows.Forms.Button();
             this.btn_KitchenBackgroundForm = new System.Windows.Forms.Button();
             this.btn_MainBackgroundForm = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxChamber = new System.Windows.Forms.PictureBox();
             this.btnSleep = new System.Windows.Forms.Button();
             this.btnTreatment = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.btnFeed = new System.Windows.Forms.Button();
             this.btn_ChamberBackgroundForm = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChamber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,15 +117,16 @@
             this.btn_MainBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_MainBackgroundForm.Click += new System.EventHandler(this.btn_MainBackgroundForm_Click);
             // 
-            // pictureBox1
+            // pictureBoxChamber
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(287, 81);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 179);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxChamber.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Chamber_Background;
+            this.pictureBoxChamber.Location = new System.Drawing.Point(262, 117);
+            this.pictureBoxChamber.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBoxChamber.Name = "pictureBoxChamber";
+            this.pictureBoxChamber.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxChamber.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxChamber.TabIndex = 23;
+            this.pictureBoxChamber.TabStop = false;
             // 
             // btnSleep
             // 
@@ -184,18 +188,39 @@
             this.btn_ChamberBackgroundForm.Text = "ChamberBackgroundForm";
             this.btn_ChamberBackgroundForm.UseVisualStyleBackColor = true;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(552, 77);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(35, 13);
+            this.lblMessage.TabIndex = 33;
+            this.lblMessage.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Chamber_Background;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
             // ChamberBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Chamber_Background;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_ChamberBackgroundForm);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnFeed);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxChamber);
             this.Controls.Add(this.btn_BathroomBackgroundForm);
             this.Controls.Add(this.btn_BedroomBackgroundForm);
             this.Controls.Add(this.btn_GameRoomBackgroundForm);
@@ -203,9 +228,11 @@
             this.Controls.Add(this.btn_MainBackgroundForm);
             this.Controls.Add(this.btn_Pause);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChamberBackgroundForm";
             this.Text = "ChamberBackgroundForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChamber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,12 +247,14 @@
         private System.Windows.Forms.Button btn_GameRoomBackgroundForm;
         private System.Windows.Forms.Button btn_KitchenBackgroundForm;
         private System.Windows.Forms.Button btn_MainBackgroundForm;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxChamber;
         private System.Windows.Forms.Button btnSleep;
         private System.Windows.Forms.Button btnTreatment;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnClean;
         private System.Windows.Forms.Button btnFeed;
         private System.Windows.Forms.Button btn_ChamberBackgroundForm;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

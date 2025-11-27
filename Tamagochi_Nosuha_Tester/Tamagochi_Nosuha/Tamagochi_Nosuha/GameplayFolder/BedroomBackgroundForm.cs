@@ -40,8 +40,28 @@ namespace Tamagochi_Nosuha
             animator.PlayAnimation(ageStr, statusStr);
         }
 
+        // Обновление цветов кнопок на основе активных состояний
+        private void UpdateButtonColors(System.Collections.Generic.List<NeedSystem.Status> statuses)
+        {
+            // Кухня - красная если голоден
+            btn_KitchenBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Hungry) ? Color.Red : Color.LightGray;
+
+            // Ванная - красная если грязный
+            btn_BathroomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Dirty) ? Color.Red : Color.LightGray;
+
+            // Спальня - красная если сонный
+            btn_BedroomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sleepy) ? Color.LightBlue : Color.LightGray;
+
+            //Больница - красная если болен
+            btn_ChamberBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sick) ? Color.Red : Color.LightGray;
+
+            //// Игровая - красная если скучно
+            //btn_GameRoomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Bored) ? Color.Red : Color.LightGray;
+        }
+
         private void OnStatusesChanged(System.Collections.Generic.List<NeedSystem.Status> statuses)
         {
+            UpdateButtonColors(statuses);
             UpdatebBedRoomAnimation();
 
             // Если голод решен - можно вернуться на главную
@@ -60,9 +80,9 @@ namespace Tamagochi_Nosuha
         #region Кнопки перемещения
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
-            //KitchenBackgroundForm kitchenBackgroundForm = new KitchenBackgroundForm();
-            //kitchenBackgroundForm.ShowDialog();
-            //this.Close();
+            KitchenBackgroundForm kitchenForm = new KitchenBackgroundForm(needSystem, ageSystem, gameTime);
+            kitchenForm.ShowDialog();
+            this.Close();
         }
 
         private void btn_MainBackgroundForm_Click(object sender, EventArgs e)
@@ -72,23 +92,23 @@ namespace Tamagochi_Nosuha
 
         private void btn_GameRoomBackgroundForm_Click(object sender, EventArgs e)
         {
-            GameRoomBackgroundForm gameRoomBackgroundForm = new GameRoomBackgroundForm();
-            gameRoomBackgroundForm.ShowDialog();
-            this.Close();
+            //GameRoomBackgroundForm gameRoomBackgroundForm = new GameRoomBackgroundForm();
+            //gameRoomBackgroundForm.ShowDialog();
+            //this.Close();
         }
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
         {
-            ChamberBackgroundForm chamberBackgroundForm = new ChamberBackgroundForm();
-            chamberBackgroundForm.ShowDialog();
+            ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem, gameTime);
+            chamberForm.ShowDialog();
             this.Close();
         }
 
         private void btn_BathroomBackgroundForm_Click(object sender, EventArgs e)
         {
-            //BathroomBackgroundForm bathroomBackgroundForm = new BathroomBackgroundForm();
-            //bathroomBackgroundForm.ShowDialog();
-            //this.Close();
+            BathroomBackgroundForm bathroomForm = new BathroomBackgroundForm(needSystem, ageSystem, gameTime);
+            bathroomForm.ShowDialog();
+            this.Close();
         }
         #endregion
 

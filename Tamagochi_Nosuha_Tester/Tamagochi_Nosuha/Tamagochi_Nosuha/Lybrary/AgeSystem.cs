@@ -60,6 +60,18 @@ namespace Tamagochi_Nosuha
                 AddProgress();
             }
         }
+
+        //Принудительная установки смерть
+        public void SetDead()
+        {
+            if (CurrentAge != Age.Dead)
+            {
+                CurrentAge = Age.Dead;
+                OnAgeChanged?.Invoke(CurrentAge);
+            }
+        }
+
+
     }
 
 }

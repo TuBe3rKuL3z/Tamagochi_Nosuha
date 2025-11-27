@@ -41,8 +41,28 @@ namespace Tamagochi_Nosuha
             animator.PlayAnimation(ageStr, statusStr);
         }
 
+        // Обновление цветов кнопок на основе активных состояний
+        private void UpdateButtonColors(System.Collections.Generic.List<NeedSystem.Status> statuses)
+        {
+            // Кухня - красная если голоден
+            btn_KitchenBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Hungry) ? Color.LightBlue : Color.LightGray;
+
+            // Ванная - красная если грязный
+            btn_BathroomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Dirty) ? Color.Red : Color.LightGray;
+
+            // Спальня - красная если сонный
+            btn_BedroomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sleepy) ? Color.Red : Color.LightGray;
+
+            //Больница - красная если болен
+            btn_ChamberBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sick) ? Color.Red : Color.LightGray;
+
+            //// Игровая - красная если скучно
+            //btn_GameRoomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Bored) ? Color.Red : Color.LightGray;
+        }
+
         private void OnStatusesChanged(System.Collections.Generic.List<NeedSystem.Status> statuses)
         {
+            UpdateButtonColors(statuses);
             UpdateKitchenAnimation();
 
             // Если голод решен - можно вернуться на главную
@@ -72,20 +92,23 @@ namespace Tamagochi_Nosuha
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
         {
-            //ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem, gameTime);
-            //chamberForm.ShowDialog();
+            ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem, gameTime);
+            chamberForm.ShowDialog();
+            this.Close();
         }
 
         private void btn_BedroomBackgroundForm_Click(object sender, EventArgs e)
         {
-            //BedroomBackgroundForm bedroomForm = new BedroomBackgroundForm(needSystem, ageSystem, gameTime);
-            //bedroomForm.ShowDialog();
+            BedroomBackgroundForm bedroomForm = new BedroomBackgroundForm(needSystem, ageSystem, gameTime);
+            bedroomForm.ShowDialog();
+            this.Close();
         }
 
         private void btn_BathroomBackgroundForm_Click(object sender, EventArgs e)
         {
-            //BathroomBackgroundForm bathroomForm = new BathroomBackgroundForm(needSystem, ageSystem, gameTime);
-            //bathroomForm.ShowDialog();
+            BathroomBackgroundForm bathroomForm = new BathroomBackgroundForm(needSystem, ageSystem, gameTime);
+            bathroomForm.ShowDialog();
+            this.Close();
         }
         #endregion
 

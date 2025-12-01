@@ -130,9 +130,8 @@ namespace Tamagochi_Nosuha
         #region Кнопки действия
         private void btnTreatment_Click(object sender, EventArgs e)
         {
-            // Лечим питомца
+            // Лечение питомца
             needSystem.Heal();
-            ageSystem.AddProgress();
 
             // Обновляем сообщение
             lblMessage.Text = "Лечение питомца...";

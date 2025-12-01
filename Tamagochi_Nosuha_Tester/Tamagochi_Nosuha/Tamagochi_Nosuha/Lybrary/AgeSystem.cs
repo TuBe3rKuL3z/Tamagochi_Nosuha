@@ -6,7 +6,6 @@ namespace Tamagochi_Nosuha
     {
         public enum Age { Baby, Adult, Old, Dead }
 
-
         public Age CurrentAge { get; private set; }
         public int Progress { get; private set; }
         public int MaxProgress => 10;
@@ -44,10 +43,22 @@ namespace Tamagochi_Nosuha
                     break;
                 case Age.Old:
                     CurrentAge = Age.Dead;
-                    break;
+                    // Вызываем событие смерти от старости
+                    OnAgeChanged?.Invoke(CurrentAge);
+                    return; // Прерываем, чтобы не вызывать OnAgeChanged второй раз
             }
 
             OnAgeChanged?.Invoke(CurrentAge);
+        }
+
+        // Метод для принудительной установки смерти (от болезни)
+        public void SetDead()
+        {
+            if (CurrentAge != Age.Dead)
+            {
+                CurrentAge = Age.Dead;
+                // НЕ вызываем OnAgeChanged здесь - это сделает MainBackgroundForm
+            }
         }
 
         public void AddRandomProgress()
@@ -60,18 +71,5 @@ namespace Tamagochi_Nosuha
                 AddProgress();
             }
         }
-
-        //Принудительная установки смерть
-        public void SetDead()
-        {
-            if (CurrentAge != Age.Dead)
-            {
-                CurrentAge = Age.Dead;
-                OnAgeChanged?.Invoke(CurrentAge);
-            }
-        }
-
-
     }
-
 }

@@ -12,19 +12,19 @@ namespace Tamagochi_Nosuha
         // Список активных состояний вместо одного CurrentStatus
         public List<Status> ActiveStatuses { get; private set; } = new List<Status>();
 
-        // Таймеры состояний
+        // Таймеры основных потребностей
         private Timer hungerTimer;
         private Timer dirtTimer;
         private Timer sleepyTimer;
-        private Timer sickTimer;
+        private Timer boredTimer;
 
-        // Интервалы состояний (для теста)
+        // Интервалы состояний (в миллисекундах)
         private int hungerInterval = 6000;
         private int dirtInterval = 10000;
         private int sleepyInterval = 15000;
-        private int sickInterval = 20000;
+        private int boredInterval = 12000;
 
-        // Интервалы анимаций
+        // Интервалы анимаций (в миллисекундах)
         private int eatAnimationTime = 2800;
         private int washAnimationTime = 4400;
         private int sleepAnimationTime = 5000;
@@ -33,26 +33,35 @@ namespace Tamagochi_Nosuha
         // Флаг блокировки для анимаций
         private bool isInAnimation = false;
 
-        // Добавляем новые поля для отслеживания болезни
-        private DateTime? sicknessStartTime = null;
-        private Timer deathFromSicknessTimer;
-        private int sicknessDeathTime = 15000; // 30 секунд
+        // ========== НОВАЯ ЛОГИКА БОЛЕЗНИ И СМЕРТИ ==========
+
+        // Таймер смерти от болезни
+        private Timer sicknessDeathTimer;
+        private const int SICKNESS_DEATH_TIME = 60000; // 1 минута = 60000 мс
+
+        // Время начала последней болезни
+        private DateTime? lastSicknessStartTime = null;
+
+        // Флаг, что лечение началось (таймер смерти остановлен)
+        private bool isHealingInProgress = false;
+
+        // Флаг, что питомец умер (для защиты от повторных вызовов)
+        private bool isDeadFromSickness = false;
 
         // Событие при изменении списка состояний
         public event Action<List<Status>> OnStatusesChanged;
-        
-        // Добавляем событие смерти от болезни
+
+        // Событие смерти от болезни
         public event Action OnDeathFromSickness;
 
         public NeedSystem()
         {
             InitializeTimers();
-            InitializeDeathTimer();
         }
 
         private void InitializeTimers()
         {
-            // Таймер голода - управляет ТОЛЬКО голодом
+            // Таймер голода
             hungerTimer = new Timer();
             hungerTimer.Interval = hungerInterval;
             hungerTimer.Tick += (s, e) => {
@@ -60,7 +69,7 @@ namespace Tamagochi_Nosuha
                     AddStatus(Status.Hungry);
             };
 
-            // Таймер грязи - управляет ТОЛЬКО грязью
+            // Таймер грязи
             dirtTimer = new Timer();
             dirtTimer.Interval = dirtInterval;
             dirtTimer.Tick += (s, e) => {
@@ -68,7 +77,7 @@ namespace Tamagochi_Nosuha
                     AddStatus(Status.Dirty);
             };
 
-            // Таймер сонливости - управляет ТОЛЬКО сонливостью
+            // Таймер сонливости
             sleepyTimer = new Timer();
             sleepyTimer.Interval = sleepyInterval;
             sleepyTimer.Tick += (s, e) => {
@@ -76,86 +85,114 @@ namespace Tamagochi_Nosuha
                     AddStatus(Status.Sleepy);
             };
 
-            // Таймер болезни (случайная болезнь) - управляет ТОЛЬКО болезнью
-            sickTimer = new Timer();
-            sickTimer.Interval = sickInterval;
-            sickTimer.Tick += (s, e) => {
-                if (new Random().Next(0, 100) < 100 && !isInAnimation && !ActiveStatuses.Contains(Status.Treatment)) // 30% шанс заболеть
-                {
-                    AddStatus(Status.Sick);
-                }
+            // Таймер скуки
+            boredTimer = new Timer();
+            boredTimer.Interval = boredInterval;
+            boredTimer.Tick += (s, e) => {
+                if (!isInAnimation)
+                    AddStatus(Status.Bored);
             };
         }
 
-        private void InitializeDeathTimer()
-        {
-            deathFromSicknessTimer = new Timer();
-            deathFromSicknessTimer.Interval = 1000; // Проверяем каждую секунду
-            deathFromSicknessTimer.Tick += (s, e) => CheckSicknessDeath();
-        }
+        // ========== НОВЫЕ МЕТОДЫ БОЛЕЗНИ ==========
 
-        private void CheckSicknessDeath()
+        /// <summary>
+        /// Проверка болезни после сна (20% шанс)
+        /// </summary>
+        public void CheckForSicknessAfterSleep()
         {
-            if (ActiveStatuses.Contains(Status.Sick) && sicknessStartTime.HasValue)
+            // Нельзя заболеть, если уже болеет или умер
+            if (!ActiveStatuses.Contains(Status.Sick) && !isDeadFromSickness && !isHealingInProgress)
             {
-                // Проверяем, прошло ли 30 секунд с начала болезни
-                if ((DateTime.Now - sicknessStartTime.Value).TotalMilliseconds >= sicknessDeathTime)
+                Random rnd = new Random();
+                if (rnd.Next(0, 100) < 80) // 20% шанс
                 {
-                    deathFromSicknessTimer.Stop();
-                    OnDeathFromSickness?.Invoke();
+                    AddSickness();
                 }
             }
         }
 
-        // Добавление состояния в список
-        public void AddStatus(Status status)
+        /// <summary>
+        /// Добавление болезни и запуск таймера смерти
+        /// </summary>
+        private void AddSickness()
         {
-            if (!ActiveStatuses.Contains(status))
+            if (!ActiveStatuses.Contains(Status.Sick))
             {
-                ActiveStatuses.Add(status);
-                
-                // Если добавили болезнь - запоминаем время начала
-                if (status == Status.Sick && !sicknessStartTime.HasValue)
-                {
-                    sicknessStartTime = DateTime.Now;
-                    deathFromSicknessTimer.Start();
-                }
-                
+                ActiveStatuses.Add(Status.Sick);
+                StartSicknessDeathTimer(); // Запускаем/перезапускаем таймер
                 OnStatusesChanged?.Invoke(ActiveStatuses);
             }
         }
 
-        // Удаление состояния из списка
-        private void RemoveStatus(Status status)
+        /// <summary>
+        /// Запуск/перезапуск таймера смерти от болезни
+        /// </summary>
+        private void StartSicknessDeathTimer()
         {
-            if (ActiveStatuses.Contains(status))
+            // Если таймер уже существует, останавливаем и перезапускаем
+            if (sicknessDeathTimer != null)
             {
-                ActiveStatuses.Remove(status);
-                
-                // Если вылечили болезнь - сбрасываем таймер смерти
-                if (status == Status.Sick)
-                {
-                    sicknessStartTime = null;
-                    deathFromSicknessTimer.Stop();
-                }
-                
-                OnStatusesChanged?.Invoke(ActiveStatuses);
+                sicknessDeathTimer.Stop();
+            }
+            else
+            {
+                // Создаем новый таймер смерти
+                sicknessDeathTimer = new Timer();
+                sicknessDeathTimer.Interval = SICKNESS_DEATH_TIME;
+                sicknessDeathTimer.Tick += OnSicknessDeathTimerTick;
+            }
+
+            // Запоминаем время начала болезни
+            lastSicknessStartTime = DateTime.Now;
+
+            // Запускаем таймер
+            sicknessDeathTimer.Start();
+        }
+
+        /// <summary>
+        /// Обработчик таймера смерти от болезни
+        /// </summary>
+        private void OnSicknessDeathTimerTick(object sender, EventArgs e)
+        {
+            // Останавливаем таймер
+            sicknessDeathTimer.Stop();
+
+            // Если лечение не началось - смерть
+            if (!isHealingInProgress && !isDeadFromSickness)
+            {
+                isDeadFromSickness = true;
+                OnDeathFromSickness?.Invoke();
             }
         }
 
-        #region Методы действий
+        /// <summary>
+        /// Остановка таймера смерти (при начале лечения)
+        /// </summary>
+        private void StopSicknessDeathTimer()
+        {
+            if (sicknessDeathTimer != null)
+            {
+                sicknessDeathTimer.Stop();
+            }
+        }
 
+        // ========== ОСНОВНЫЕ МЕТОДЫ ДЕЙСТВИЙ ==========
+
+        /// <summary>
+        /// Кормление
+        /// </summary>
         public void Feed()
         {
-            if (ActiveStatuses.Contains(Status.Hungry) && !isInAnimation)
+            if (ActiveStatuses.Contains(Status.Hungry) && !isInAnimation && !isDeadFromSickness)
             {
                 isInAnimation = true;
 
-                // Временно показываем анимацию еды
+                // Сохраняем другие активные состояния кроме голода
                 var previousStatuses = ActiveStatuses.Where(s => s != Status.Hungry).ToList();
                 ActiveStatuses.Clear();
                 ActiveStatuses.Add(Status.Eat);
-                // Сохраняем другие активные состояния кроме голода
+                // Сохраняем другие активные состояния
                 foreach (var status in previousStatuses)
                 {
                     ActiveStatuses.Add(status);
@@ -167,19 +204,21 @@ namespace Tamagochi_Nosuha
                 eatTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Eat);
                     RemoveStatus(Status.Hungry);
-                    ResetTimer(hungerTimer); // Сбрасываем ТОЛЬКО таймер голода
+                    ResetTimer(hungerTimer);
                     eatTimer.Stop();
 
-                    // Разблокируем
                     isInAnimation = false;
                 };
                 eatTimer.Start();
             }
         }
 
+        /// <summary>
+        /// Мытье
+        /// </summary>
         public void Clean()
         {
-            if (ActiveStatuses.Contains(Status.Dirty) && !isInAnimation)
+            if (ActiveStatuses.Contains(Status.Dirty) && !isInAnimation && !isDeadFromSickness)
             {
                 isInAnimation = true;
 
@@ -199,7 +238,7 @@ namespace Tamagochi_Nosuha
                 washTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Washes);
                     RemoveStatus(Status.Dirty);
-                    ResetTimer(dirtTimer); // Сбрасываем ТОЛЬКО таймер грязи
+                    ResetTimer(dirtTimer);
                     washTimer.Stop();
 
                     isInAnimation = false;
@@ -208,9 +247,12 @@ namespace Tamagochi_Nosuha
             }
         }
 
+        /// <summary>
+        /// Сон
+        /// </summary>
         public void Sleep()
         {
-            if (ActiveStatuses.Contains(Status.Sleepy) && !isInAnimation)
+            if (ActiveStatuses.Contains(Status.Sleepy) && !isInAnimation && !isDeadFromSickness)
             {
                 isInAnimation = true;
 
@@ -230,20 +272,28 @@ namespace Tamagochi_Nosuha
                 sleepTimer.Tick += (s, e) => {
                     RemoveStatus(Status.Sleep);
                     RemoveStatus(Status.Sleepy);
-                    ResetTimer(sleepyTimer); // Сбрасываем ТОЛЬКО таймер сонливости
+                    ResetTimer(sleepyTimer);
                     sleepTimer.Stop();
 
                     isInAnimation = false;
+
+                    // ПОСЛЕ СНА: проверяем болезнь (20% шанс)
+                    CheckForSicknessAfterSleep();
                 };
                 sleepTimer.Start();
             }
         }
 
+        /// <summary>
+        /// Лечение (НАЧАЛО лечения)
+        /// </summary>
         public void Heal()
         {
-            if (ActiveStatuses.Contains(Status.Sick) && !isInAnimation)
+            if (ActiveStatuses.Contains(Status.Sick) && !isInAnimation && !isDeadFromSickness)
             {
                 isInAnimation = true;
+                isHealingInProgress = true; // Лечение началось
+                StopSicknessDeathTimer();   // Останавливаем таймер смерти
 
                 // Сохраняем другие активные состояния кроме болезни
                 var previousStatuses = ActiveStatuses.Where(s => s != Status.Sick).ToList();
@@ -259,73 +309,118 @@ namespace Tamagochi_Nosuha
                 var treatmentTimer = new Timer();
                 treatmentTimer.Interval = treatmentAnimationTime;
                 treatmentTimer.Tick += (s, e) => {
+                    // Завершение лечения
                     RemoveStatus(Status.Treatment);
-                    RemoveStatus(Status.Sick);
-                    ResetTimer(sickTimer); // Сбрасываем ТОЛЬКО таймер болезни
+                    RemoveStatus(Status.Sick); // Удаляем болезнь
                     treatmentTimer.Stop();
 
                     isInAnimation = false;
+                    isHealingInProgress = false;
+                    lastSicknessStartTime = null; // Сбрасываем время болезни
                 };
                 treatmentTimer.Start();
             }
         }
 
+        /// <summary>
+        /// Игра (убирает скуку)
+        /// </summary>
         public void Play()
         {
-            if (!isInAnimation)
+            if (!isInAnimation && ActiveStatuses.Contains(Status.Bored) && !isDeadFromSickness)
             {
                 RemoveStatus(Status.Bored);
+                ResetTimer(boredTimer);
             }
         }
 
+        // ========== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ==========
+
+        /// <summary>
+        /// Добавление состояния
+        /// </summary>
+        public void AddStatus(Status status)
+        {
+            if (!ActiveStatuses.Contains(status) && !isDeadFromSickness)
+            {
+                ActiveStatuses.Add(status);
+                OnStatusesChanged?.Invoke(ActiveStatuses);
+            }
+        }
+
+        /// <summary>
+        /// Удаление состояния
+        /// </summary>
+        private void RemoveStatus(Status status)
+        {
+            if (ActiveStatuses.Contains(status))
+            {
+                ActiveStatuses.Remove(status);
+                OnStatusesChanged?.Invoke(ActiveStatuses);
+            }
+        }
+
+        /// <summary>
+        /// Перезапуск таймера
+        /// </summary>
         private void ResetTimer(Timer timer)
         {
             timer.Stop();
             timer.Start();
         }
 
-        #endregion
-
+        /// <summary>
+        /// Запуск всех таймеров потребностей
+        /// </summary>
         public void StartNeeds()
         {
             hungerTimer.Start();
             dirtTimer.Start();
             sleepyTimer.Start();
-            sickTimer.Start();
+            boredTimer.Start();
         }
 
-        // Добавляем метод остановки всех таймеров
+        /// <summary>
+        /// Остановка ВСЕХ таймеров (при смерти)
+        /// </summary>
         public void StopAllTimers()
         {
             hungerTimer.Stop();
             dirtTimer.Stop();
             sleepyTimer.Stop();
-            sickTimer.Stop();
-            deathFromSicknessTimer.Stop();
+            boredTimer.Stop();
+
+            // Останавливаем таймер смерти
+            StopSicknessDeathTimer();
         }
 
-        // Получение приоритетного состояния для анимации
+        /// <summary>
+        /// Получение приоритетного состояния для анимации
+        /// </summary>
         public Status GetPriorityStatus()
         {
-            // Сначала проверяем анимационные статусы
+            // Сначала анимационные статусы
             if (ActiveStatuses.Contains(Status.Eat)) return Status.Eat;
             if (ActiveStatuses.Contains(Status.Washes)) return Status.Washes;
             if (ActiveStatuses.Contains(Status.Sleep)) return Status.Sleep;
             if (ActiveStatuses.Contains(Status.Treatment)) return Status.Treatment;
-            
-            // Затем проверяем проблемные статусы
+
+            // Затем проблемные статусы
             if (ActiveStatuses.Contains(Status.Sick)) return Status.Sick;
             if (ActiveStatuses.Contains(Status.Hungry)) return Status.Hungry;
             if (ActiveStatuses.Contains(Status.Dirty)) return Status.Dirty;
             if (ActiveStatuses.Contains(Status.Sleepy)) return Status.Sleepy;
             if (ActiveStatuses.Contains(Status.Bored)) return Status.Bored;
-            
+
             return Status.Normal;
         }
 
+        /// <summary>
+        /// Установка сонливости ночью
+        /// </summary>
         public void SetSleepyFromNight()
         {
-            if (!isInAnimation && !ActiveStatuses.Contains(Status.Sleep))
+            if (!isInAnimation && !ActiveStatuses.Contains(Status.Sleep) && !isDeadFromSickness)
                 AddStatus(Status.Sleepy);
         }
     }

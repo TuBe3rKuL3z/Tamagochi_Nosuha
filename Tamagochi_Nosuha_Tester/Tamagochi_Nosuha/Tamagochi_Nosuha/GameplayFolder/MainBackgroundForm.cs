@@ -1,7 +1,6 @@
 ﻿using AnimationTest2;
 using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
@@ -12,6 +11,7 @@ namespace Tamagochi_Nosuha
         private AgeSystem ageSystem;
         private NeedSystem needSystem;
         private Animator animator;
+        private bool isPetDead = false;
 
         public MainBackgroundForm()
         {
@@ -42,62 +42,37 @@ namespace Tamagochi_Nosuha
         // Время
         private void UpdateTimeDisplay(string time, string timeOfDay)
         {
+            if (isPetDead) return;
+
             lblGameTime.Text = $"{time} ({timeOfDay})";
             lblGameDay.Text = $"День: {gameTime.GetCurrentDay()}";
 
             if (timeOfDay == "Ночь")
             {
-                needSystem.SetSleepyFromNight(); // вместо needSystem.AddStatus(NeedSystem.Status.Sleepy)
+                needSystem.SetSleepyFromNight();
             }
         }
-
-        // Обработчик смерти от болезни
-        private void OnDeathFromSickness()
-        {
-            // Останавливаем все таймеры
-            gameTime.StopTime();
-            needSystem.StopAllTimers();
-
-            // Устанавливаем смерть в AgeSystem
-            ageSystem.SetDead();
-
-            // Обновляем анимацию на смерть
-            UpdateAnimation();
-
-            // Блокируем все кнопки
-            BlockAllButtons();
-
-            // Показываем сообщение о смерти
-            MessageBox.Show("Питомец умер от болезни! Игра окончена.", "Смерть",
-                           MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void BlockAllButtons()
-        {
-            btn_KitchenBackgroundForm.Enabled = false;
-            btn_BathroomBackgroundForm.Enabled = false;
-            btn_BedroomBackgroundForm.Enabled = false;
-            btn_ChamberBackgroundForm.Enabled = false;
-            btn_GameRoomBackgroundForm.Enabled = false;
-
-            // Блокируем кнопки действий
-            btnFeed.Enabled = false;
-            btnClean.Enabled = false;
-            btnPlay.Enabled = false;
-            btnSleep.Enabled = false;
-            btnTreatment.Enabled = false;
-        }
-
 
         // Меняем анимацию при смене возраста
         private void OnAgeChanged(AgeSystem.Age newAge)
         {
-            UpdateAnimation();
+            if (isPetDead) return;
+
+            if (newAge == AgeSystem.Age.Dead)
+            {
+                ProcessDeath("от старости");
+            }
+            else
+            {
+                UpdateAnimation();
+            }
         }
 
         // Обработчик изменения состояний
         private void OnStatusesChanged(System.Collections.Generic.List<NeedSystem.Status> statuses)
         {
+            if (isPetDead) return;
+
             UpdateButtonColors(statuses);
             UpdateAnimation();
         }
@@ -105,6 +80,8 @@ namespace Tamagochi_Nosuha
         // Обновление анимации на основе приоритетного состояния
         private void UpdateAnimation()
         {
+            if (isPetDead) return;
+
             string ageStr = ageSystem.CurrentAge.ToString().ToLower();
             string statusStr = needSystem.GetPriorityStatus().ToString().ToLower();
             animator.PlayAnimation(ageStr, statusStr);
@@ -113,6 +90,8 @@ namespace Tamagochi_Nosuha
         // Обновление цветов кнопок на основе активных состояний
         private void UpdateButtonColors(System.Collections.Generic.List<NeedSystem.Status> statuses)
         {
+            if (isPetDead) return;
+
             // Кухня - красная если голоден
             btn_KitchenBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Hungry) ? Color.Red : Color.LightGray;
 
@@ -122,46 +101,132 @@ namespace Tamagochi_Nosuha
             // Спальня - красная если сонный
             btn_BedroomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sleepy) ? Color.Red : Color.LightGray;
 
-            //Больница - красная если болен
+            // Больница - красная если болен
             btn_ChamberBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Sick) ? Color.Red : Color.LightGray;
 
-            //// Игровая - красная если скучно
-            //btn_GameRoomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Bored) ? Color.Red : Color.LightGray;
+            // Игровая - красная если скучно
+            btn_GameRoomBackgroundForm.BackColor = statuses.Contains(NeedSystem.Status.Bored) ? Color.Red : Color.LightGray;
+        }
+
+        // Обработчик смерти от болезни
+        private void OnDeathFromSickness()
+        {
+            // Проверяем, нужно ли вызывать Invoke
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(OnDeathFromSickness));
+                return;
+            }
+
+            if (isPetDead) return;
+            isPetDead = true;
+
+            // 1. Останавливаем ВСЁ
+            gameTime.StopTime();
+            needSystem.StopAllTimers();
+
+            // 2. Блокируем ВСЁ
+            BlockAllButtons();
+
+            // 3. Анимация смерти
+            animator.PlayAnimation("dead", "dead");
+
+            // 4. Сообщение
+            MessageBox.Show("Питомец умер от болезни! Игра окончена.",
+                           "Смерть", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        // Универсальный метод обработки смерти
+        private void ProcessDeath(string reason)
+        {
+            if (isPetDead) return; // Защита от повторного вызова
+
+            isPetDead = true;
+
+            // 1. Немедленно блокируем все кнопки
+            BlockAllButtons();
+
+            // 2. Останавливаем все системы
+            gameTime.StopTime();
+            needSystem.StopAllTimers();
+
+            // 3. Устанавливаем смерть в AgeSystem
+            ageSystem.SetDead();
+
+            // 4. Прямая анимация смерти (не через UpdateAnimation)
+            animator.PlayAnimation("dead", "dead");
+
+            // 5. Отписываемся от событий, чтобы избежать дальнейших обновлений
+            gameTime.OnTimeChanged -= UpdateTimeDisplay;
+            ageSystem.OnAgeChanged -= OnAgeChanged;
+            needSystem.OnStatusesChanged -= OnStatusesChanged;
+            needSystem.OnDeathFromSickness -= OnDeathFromSickness;
+
+            // 6. Показываем сообщение
+            MessageBox.Show($"Питомец умер {reason}! Игра окончена.", "Смерть",
+                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void BlockAllButtons()
+        {
+            // Кнопки перехода
+            btn_KitchenBackgroundForm.Enabled = false;
+            btn_BathroomBackgroundForm.Enabled = false;
+            btn_BedroomBackgroundForm.Enabled = false;
+            btn_ChamberBackgroundForm.Enabled = false;
+            btn_GameRoomBackgroundForm.Enabled = false;
+            btn_MainBackgroundForm.Enabled = false;
+
+            // Кнопки действий
+            btnFeed.Enabled = false;
+            btnClean.Enabled = false;
+            btnPlay.Enabled = false;
+            btnSleep.Enabled = false;
+            btnTreatment.Enabled = false;
+
+            // Кнопка паузы
+            btn_Pause.Enabled = false;
         }
 
         #region Кнопки для перехода
         private void btn_Pause_Click(object sender, EventArgs e)
         {
+            if (isPetDead) return;
             PauseForm pauseForm = new PauseForm();
             pauseForm.ShowDialog();
         }
 
         private void btn_KitchenBackgroundForm_Click(object sender, EventArgs e)
         {
+            if (isPetDead) return;
             KitchenBackgroundForm kitchenForm = new KitchenBackgroundForm(needSystem, ageSystem, gameTime);
             kitchenForm.ShowDialog();
         }
 
         private void btn_GameRoomBackgroundForm_Click(object sender, EventArgs e)
         {
-            //GameRoomBackgroundForm gameRoomForm = new GameRoomBackgroundForm(needSystem, ageSystem);
+            //if (isPetDead) return;
+            //GameRoomBackgroundForm gameRoomForm = new GameRoomBackgroundForm(needSystem, ageSystem, gameTime);
             //gameRoomForm.ShowDialog();
         }
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
         {
+            if (isPetDead) return;
             ChamberBackgroundForm chamberForm = new ChamberBackgroundForm(needSystem, ageSystem, gameTime);
             chamberForm.ShowDialog();
         }
 
         private void btn_BedroomBackgroundForm_Click(object sender, EventArgs e)
         {
+            if (isPetDead) return;
             BedroomBackgroundForm bedroomForm = new BedroomBackgroundForm(needSystem, ageSystem, gameTime);
             bedroomForm.ShowDialog();
         }
 
         private void btn_BathroomBackgroundForm_Click(object sender, EventArgs e)
         {
+            if (isPetDead) return;
             BathroomBackgroundForm bathroomForm = new BathroomBackgroundForm(needSystem, ageSystem, gameTime);
             bathroomForm.ShowDialog();
         }
@@ -170,47 +235,37 @@ namespace Tamagochi_Nosuha
         #region Кнопки действия (можно оставить для быстрых действий)
         private void btnFeed_Click(object sender, EventArgs e)
         {
-            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
-            {
-                needSystem.Feed();
-                ageSystem.AddProgress();
-            }
+            if (isPetDead) return;
+            needSystem.Feed();
+            ageSystem.AddProgress();
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
-            {
-                needSystem.Clean();
-                ageSystem.AddProgress();
-            }
+            if (isPetDead) return;
+            needSystem.Clean();
+            ageSystem.AddProgress();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
-            {
-                needSystem.Play();
-                ageSystem.AddProgress();
-            }
+            if (isPetDead) return;
+            needSystem.Play();
+            ageSystem.AddProgress();
         }
 
         private void btnSleep_Click(object sender, EventArgs e)
         {
-            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
-            {
-                needSystem.Sleep();
-                ageSystem.AddProgress();
-            }
+            if (isPetDead) return;
+            needSystem.Sleep();
+            ageSystem.AddProgress();
         }
 
         private void btnTreatment_Click(object sender, EventArgs e)
         {
-            if (ageSystem.CurrentAge != AgeSystem.Age.Dead)
-            {
-                needSystem.Heal();
-                ageSystem.AddProgress();
-            }
+            if (isPetDead) return;
+            needSystem.Heal();
+            ageSystem.AddProgress();
         }
 
         private void MethodOfButton()

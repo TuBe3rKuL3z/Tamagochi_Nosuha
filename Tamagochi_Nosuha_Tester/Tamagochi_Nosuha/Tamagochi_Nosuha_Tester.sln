@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tamagochi_Nosuha_Tester", "Tamagochi_Nosuha\Tamagochi_Nosuha_Tester.csproj", "{CDAB62A0-F22E-4B1B-B815-BB1A23B2AD8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTamagochi", "UnitTestTamagochi\UnitTestTamagochi.csproj", "{26B7BBAD-E2EF-44C7-8849-4F2CB52E78F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CDAB62A0-F22E-4B1B-B815-BB1A23B2AD8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDAB62A0-F22E-4B1B-B815-BB1A23B2AD8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDAB62A0-F22E-4B1B-B815-BB1A23B2AD8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B7BBAD-E2EF-44C7-8849-4F2CB52E78F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B7BBAD-E2EF-44C7-8849-4F2CB52E78F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B7BBAD-E2EF-44C7-8849-4F2CB52E78F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B7BBAD-E2EF-44C7-8849-4F2CB52E78F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

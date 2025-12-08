@@ -216,6 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Main;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_MainBackgroundForm);
             this.Controls.Add(this.btnSleep);

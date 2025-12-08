@@ -43,9 +43,7 @@
             this.btnFeed = new System.Windows.Forms.Button();
             this.btn_ChamberBackgroundForm = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChamber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Pause
@@ -197,16 +195,6 @@
             this.lblMessage.TabIndex = 33;
             this.lblMessage.Text = "label1";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Chamber_Background;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1920, 1080);
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
-            // 
             // ChamberBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,12 +216,10 @@
             this.Controls.Add(this.btn_MainBackgroundForm);
             this.Controls.Add(this.btn_Pause);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChamberBackgroundForm";
             this.Text = "ChamberBackgroundForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChamber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,6 +241,5 @@
         private System.Windows.Forms.Button btnFeed;
         private System.Windows.Forms.Button btn_ChamberBackgroundForm;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

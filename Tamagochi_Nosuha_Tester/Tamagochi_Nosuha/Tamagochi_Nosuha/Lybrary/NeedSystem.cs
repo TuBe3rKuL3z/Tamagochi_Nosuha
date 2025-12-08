@@ -54,6 +54,9 @@ namespace Tamagochi_Nosuha
         // Событие смерти от болезни
         public event Action OnDeathFromSickness;
 
+        //Событие для завершения действия
+        public event Action OnActionCompleted;
+
         public NeedSystem()
         {
             InitializeTimers();
@@ -179,9 +182,7 @@ namespace Tamagochi_Nosuha
 
         // ========== ОСНОВНЫЕ МЕТОДЫ ДЕЙСТВИЙ ==========
 
-        /// <summary>
         /// Кормление
-        /// </summary>
         public void Feed()
         {
             if (ActiveStatuses.Contains(Status.Hungry) && !isInAnimation && !isDeadFromSickness)
@@ -208,6 +209,8 @@ namespace Tamagochi_Nosuha
                     eatTimer.Stop();
 
                     isInAnimation = false;
+
+                    OnActionCompleted?.Invoke();
                 };
                 eatTimer.Start();
             }
@@ -242,6 +245,8 @@ namespace Tamagochi_Nosuha
                     washTimer.Stop();
 
                     isInAnimation = false;
+
+                    OnActionCompleted?.Invoke();
                 };
                 washTimer.Start();
             }
@@ -279,6 +284,8 @@ namespace Tamagochi_Nosuha
 
                     // ПОСЛЕ СНА: проверяем болезнь (20% шанс)
                     CheckForSicknessAfterSleep();
+
+                    OnActionCompleted?.Invoke();
                 };
                 sleepTimer.Start();
             }
@@ -317,6 +324,8 @@ namespace Tamagochi_Nosuha
                     isInAnimation = false;
                     isHealingInProgress = false;
                     lastSicknessStartTime = null; // Сбрасываем время болезни
+
+                    OnActionCompleted?.Invoke();
                 };
                 treatmentTimer.Start();
             }

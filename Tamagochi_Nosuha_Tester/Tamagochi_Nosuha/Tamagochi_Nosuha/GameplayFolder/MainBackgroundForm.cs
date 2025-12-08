@@ -25,11 +25,14 @@ namespace Tamagochi_Nosuha
             needSystem = new NeedSystem();
             animator = new Animator(pictureBox1);
 
-            // Подписываемся на события
+            //Подписываемся на события
             gameTime.OnTimeChanged += UpdateTimeDisplay;
             ageSystem.OnAgeChanged += OnAgeChanged;
             needSystem.OnStatusesChanged += OnStatusesChanged;
             needSystem.OnDeathFromSickness += OnDeathFromSickness;
+
+            //Подписываемся на завершение действий
+            needSystem.OnActionCompleted += OnNeedSystemActionCompleted;
 
             // Запускаем первую анимацию
             UpdateAnimation();
@@ -37,6 +40,12 @@ namespace Tamagochi_Nosuha
             // Запускаем системы
             gameTime.StartTime();
             needSystem.StartNeeds();
+        }
+
+        //Завершение действий
+        private void OnNeedSystemActionCompleted()
+        {
+            ageSystem.AddProgress(); // Прогресс ТОЛЬКО после завершения действия
         }
 
         // Время
@@ -237,35 +246,30 @@ namespace Tamagochi_Nosuha
         {
             if (isPetDead) return;
             needSystem.Feed();
-            ageSystem.AddProgress();
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
             if (isPetDead) return;
             needSystem.Clean();
-            ageSystem.AddProgress();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
             if (isPetDead) return;
             needSystem.Play();
-            ageSystem.AddProgress();
         }
 
         private void btnSleep_Click(object sender, EventArgs e)
         {
             if (isPetDead) return;
             needSystem.Sleep();
-            ageSystem.AddProgress();
         }
 
         private void btnTreatment_Click(object sender, EventArgs e)
         {
             if (isPetDead) return;
             needSystem.Heal();
-            ageSystem.AddProgress();
         }
 
         private void MethodOfButton()

@@ -10,25 +10,51 @@ namespace Tamagochi_Nosuha
         public int Progress { get; private set; }
         public int MaxProgress => 10;
 
+        // Флаг празднования (блокирует добавление прогресса)
+        public bool IsCelebrating { get; private set; }
+
+        // Существующие события
         public event Action<Age> OnAgeChanged;
+        public event Action<int> OnProgressChanged;
+
+        // НОВОЕ: Событие достижения максимума прогресса
+        public event Action OnProgressMaxReached;
 
         public AgeSystem()
         {
             CurrentAge = Age.Baby;
             Progress = 0;
+            IsCelebrating = false;
         }
 
         public void AddProgress(int amount = 1)
         {
-            if (CurrentAge == Age.Dead) return;
+            if (CurrentAge == Age.Dead || IsCelebrating) return;
 
+            int oldProgress = Progress;
             Progress += amount;
 
+            // Уведомляем об изменении прогресса
+            OnProgressChanged?.Invoke(Progress);
+
+            // Проверяем, достигли ли максимума
             if (Progress >= MaxProgress)
             {
-                Progress = 0;
-                NextAge();
+                Progress = MaxProgress; // Фиксируем на максимуме
+                IsCelebrating = true;   // Начинаем празднование
+                OnProgressMaxReached?.Invoke(); // Уведомляем
             }
+        }
+
+        // НОВЫЙ МЕТОД: Переход к следующему возрасту (после празднования)
+        public void AdvanceToNextAge()
+        {
+            if (!IsCelebrating || CurrentAge == Age.Dead) return;
+
+            Progress = 0; // Сбрасываем прогресс
+            IsCelebrating = false; // Заканчиваем празднование
+
+            NextAge(); // Переходим к следующему возрасту
         }
 
         private void NextAge()
@@ -45,7 +71,7 @@ namespace Tamagochi_Nosuha
                     CurrentAge = Age.Dead;
                     // Вызываем событие смерти от старости
                     OnAgeChanged?.Invoke(CurrentAge);
-                    return; // Прерываем, чтобы не вызывать OnAgeChanged второй раз
+                    return; // Прерываем
             }
 
             OnAgeChanged?.Invoke(CurrentAge);
@@ -57,8 +83,15 @@ namespace Tamagochi_Nosuha
             if (CurrentAge != Age.Dead)
             {
                 CurrentAge = Age.Dead;
-                // НЕ вызываем OnAgeChanged здесь - это сделает MainBackgroundForm
+                IsCelebrating = false;
+                OnProgressChanged?.Invoke(Progress);
             }
+        }
+
+        // НОВЫЙ МЕТОД: Принудительно закончить празднование (на случай багов)
+        public void CancelCelebration()
+        {
+            IsCelebrating = false;
         }
 
         public void AddRandomProgress()
@@ -69,6 +102,19 @@ namespace Tamagochi_Nosuha
             for (int i = 0; i < actions; i++)
             {
                 AddProgress();
+            }
+        }
+
+        // НОВЫЙ МЕТОД: Получение текста возраста
+        public string GetAgeText()
+        {
+            switch (CurrentAge)
+            {
+                case Age.Baby: return "Ребенок";
+                case Age.Adult: return "Взрослый";
+                case Age.Old: return "Пожилой";
+                case Age.Dead: return "Мертв";
+                default: return "Неизвестно";
             }
         }
     }

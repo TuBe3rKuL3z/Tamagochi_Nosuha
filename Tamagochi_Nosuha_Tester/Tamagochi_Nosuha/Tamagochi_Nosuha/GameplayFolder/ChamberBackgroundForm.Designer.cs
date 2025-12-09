@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btn_Pause = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_BathroomBackgroundForm = new System.Windows.Forms.Button();
             this.btn_BedroomBackgroundForm = new System.Windows.Forms.Button();
             this.btn_GameRoomBackgroundForm = new System.Windows.Forms.Button();
@@ -43,7 +42,12 @@
             this.btnFeed = new System.Windows.Forms.Button();
             this.btn_ChamberBackgroundForm = new System.Windows.Forms.Button();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.pictureBoxClock = new System.Windows.Forms.PictureBox();
+            this.labelAgeStatus = new System.Windows.Forms.Label();
+            this.pictureBoxProgressBar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChamber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProgressBar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Pause
@@ -55,15 +59,6 @@
             this.btn_Pause.Text = "Пауза";
             this.btn_Pause.UseVisualStyleBackColor = true;
             this.btn_Pause.Click += new System.EventHandler(this.btn_Pause_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(226, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "ChamberBackgroundForm";
             // 
             // btn_BathroomBackgroundForm
             // 
@@ -189,11 +184,43 @@
             // lblMessage
             // 
             this.lblMessage.AutoSize = true;
-            this.lblMessage.Location = new System.Drawing.Point(552, 77);
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(767, 25);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(35, 13);
-            this.lblMessage.TabIndex = 33;
-            this.lblMessage.Text = "label1";
+            this.lblMessage.Size = new System.Drawing.Size(62, 21);
+            this.lblMessage.TabIndex = 42;
+            this.lblMessage.Text = "label2";
+            // 
+            // pictureBoxClock
+            // 
+            this.pictureBoxClock.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxClock.Image = global::Tamagochi_Nosuha.Properties.Resources.Clock;
+            this.pictureBoxClock.Location = new System.Drawing.Point(728, 0);
+            this.pictureBoxClock.Name = "pictureBoxClock";
+            this.pictureBoxClock.Size = new System.Drawing.Size(140, 66);
+            this.pictureBoxClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxClock.TabIndex = 43;
+            this.pictureBoxClock.TabStop = false;
+            // 
+            // labelAgeStatus
+            // 
+            this.labelAgeStatus.AutoSize = true;
+            this.labelAgeStatus.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAgeStatus.Location = new System.Drawing.Point(477, 980);
+            this.labelAgeStatus.Name = "labelAgeStatus";
+            this.labelAgeStatus.Size = new System.Drawing.Size(62, 21);
+            this.labelAgeStatus.TabIndex = 49;
+            this.labelAgeStatus.Text = "label1";
+            // 
+            // pictureBoxProgressBar
+            // 
+            this.pictureBoxProgressBar.Location = new System.Drawing.Point(477, 1007);
+            this.pictureBoxProgressBar.Name = "pictureBoxProgressBar";
+            this.pictureBoxProgressBar.Size = new System.Drawing.Size(943, 52);
+            this.pictureBoxProgressBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProgressBar.TabIndex = 48;
+            this.pictureBoxProgressBar.TabStop = false;
             // 
             // ChamberBackgroundForm
             // 
@@ -201,7 +228,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Chamber_Background;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.labelAgeStatus);
+            this.Controls.Add(this.pictureBoxProgressBar);
             this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.pictureBoxClock);
             this.Controls.Add(this.btn_ChamberBackgroundForm);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);
@@ -215,11 +245,12 @@
             this.Controls.Add(this.btn_KitchenBackgroundForm);
             this.Controls.Add(this.btn_MainBackgroundForm);
             this.Controls.Add(this.btn_Pause);
-            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChamberBackgroundForm";
             this.Text = "ChamberBackgroundForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChamber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProgressBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +258,6 @@
 
         #endregion
         private System.Windows.Forms.Button btn_Pause;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_BathroomBackgroundForm;
         private System.Windows.Forms.Button btn_BedroomBackgroundForm;
         private System.Windows.Forms.Button btn_GameRoomBackgroundForm;
@@ -241,5 +271,8 @@
         private System.Windows.Forms.Button btnFeed;
         private System.Windows.Forms.Button btn_ChamberBackgroundForm;
         private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.PictureBox pictureBoxClock;
+        private System.Windows.Forms.Label labelAgeStatus;
+        private System.Windows.Forms.PictureBox pictureBoxProgressBar;
     }
 }

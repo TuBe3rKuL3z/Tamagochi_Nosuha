@@ -7,6 +7,8 @@ namespace Tamagochi_Nosuha
 {
     public partial class KitchenBackgroundForm : Form
     {
+        private AgeProgressManager ageProgressManager;
+
         private NeedSystem needSystem;
         private AgeSystem ageSystem;
         private Animator animator;
@@ -31,6 +33,12 @@ namespace Tamagochi_Nosuha
             // Подписываемся на события
             this.needSystem.OnStatusesChanged += OnStatusesChanged;
             this.ageSystem.OnAgeChanged += OnAgeChanged;
+
+            ageProgressManager = new AgeProgressManager(
+            ageSystem,
+            pictureBoxProgressBar,
+            labelAgeStatus
+            );
         }
 
         // Обновление анимации на кухне

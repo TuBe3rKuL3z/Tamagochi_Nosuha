@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Lybrary\AgeProgressIndicator.cs" />
+    <Compile Include="Lybrary\AgeProgressManager.cs" />
     <Compile Include="Lybrary\AgeSystem.cs" />
     <Compile Include="Lybrary\GameTime.cs" />
     <Compile Include="Lybrary\Animator.cs" />

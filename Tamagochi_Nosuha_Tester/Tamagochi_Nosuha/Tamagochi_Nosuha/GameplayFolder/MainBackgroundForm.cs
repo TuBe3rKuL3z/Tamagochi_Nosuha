@@ -13,7 +13,11 @@ namespace Tamagochi_Nosuha
         private AgeSystem ageSystem;
         private NeedSystem needSystem;
         private Animator animator;
+        private AgeProgressManager ageProgressManager;
         private bool isPetDead = false;
+
+        private bool isUICelebrationLocked = false;
+
 
         public MainBackgroundForm()
         {
@@ -27,13 +31,23 @@ namespace Tamagochi_Nosuha
             needSystem = new NeedSystem();
             animator = new Animator(pictureBox1);
 
-            //Подписываемся на события
+            // Создаем менеджер прогресса
+            // Предполагается, что на форме есть:
+            // - pictureBoxProgressBar (для прогресс-бара)
+            // - lblAgeStatus (для текста возраста)
+            ageProgressManager = new AgeProgressManager(
+                ageSystem,
+                pictureBoxProgressBar,
+                lblAgeStatus,
+                animator,
+                pictureBox1
+            );
+
+            // Подписываемся на события
             gameTime.OnTimeChanged += UpdateTimeDisplay;
             ageSystem.OnAgeChanged += OnAgeChanged;
             needSystem.OnStatusesChanged += OnStatusesChanged;
             needSystem.OnDeathFromSickness += OnDeathFromSickness;
-
-            //Подписываемся на завершение действий
             needSystem.OnActionCompleted += OnNeedSystemActionCompleted;
 
             // Запускаем первую анимацию
@@ -42,7 +56,39 @@ namespace Tamagochi_Nosuha
             // Запускаем системы
             gameTime.StartTime();
             needSystem.StartNeeds();
+
         }
+
+        //Обновление блокировки UI
+
+        private void UpdateUILockState()
+        {
+            bool shouldLock = isPetDead || isUICelebrationLocked || ageSystem.IsCelebrating;
+
+            // Блокируем/разблокируем кнопки
+            SetButtonsEnabled(!shouldLock);
+        }
+
+        private void SetButtonsEnabled(bool enabled)
+        {
+            // Кнопки перехода
+            btn_KitchenBackgroundForm.Enabled = enabled;
+            btn_BathroomBackgroundForm.Enabled = enabled;
+            btn_BedroomBackgroundForm.Enabled = enabled;
+            btn_ChamberBackgroundForm.Enabled = enabled;
+            btn_GameRoomBackgroundForm.Enabled = enabled;
+
+            // Кнопки действий
+            btnFeed.Enabled = enabled;
+            btnClean.Enabled = enabled;
+            btnPlay.Enabled = enabled;
+            btnSleep.Enabled = enabled;
+            btnTreatment.Enabled = enabled;
+
+            // Кнопка паузы
+            btn_Pause.Enabled = enabled;
+        }
+
 
         //Завершение действий
         private void OnNeedSystemActionCompleted()
@@ -263,32 +309,32 @@ namespace Tamagochi_Nosuha
         #region Кнопки действия (можно оставить для быстрых действий)
         private void btnFeed_Click(object sender, EventArgs e)
         {
-            if (isPetDead) return;
+            if (isPetDead || ageSystem.IsCelebrating) return;
             needSystem.Feed();
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-            if (isPetDead) return;
+            if (isPetDead || ageSystem.IsCelebrating) return;
             needSystem.Clean();
+        }
+
+        private void btnSleep_Click(object sender, EventArgs e)
+        {
+            if (isPetDead || ageSystem.IsCelebrating) return;
+            needSystem.Sleep();
+        }
+
+        private void btnTreatment_Click(object sender, EventArgs e)
+        {
+            if (isPetDead || ageSystem.IsCelebrating) return;
+            needSystem.Heal();
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
             if (isPetDead) return;
             needSystem.Play();
-        }
-
-        private void btnSleep_Click(object sender, EventArgs e)
-        {
-            if (isPetDead) return;
-            needSystem.Sleep();
-        }
-
-        private void btnTreatment_Click(object sender, EventArgs e)
-        {
-            if (isPetDead) return;
-            needSystem.Heal();
         }
 
         private void MethodOfButton()

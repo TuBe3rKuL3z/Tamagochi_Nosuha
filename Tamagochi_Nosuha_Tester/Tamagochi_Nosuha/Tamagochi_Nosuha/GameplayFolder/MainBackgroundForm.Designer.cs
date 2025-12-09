@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Pause = new System.Windows.Forms.Button();
             this.btn_KitchenBackgroundForm = new System.Windows.Forms.Button();
             this.btn_GameRoomBackgroundForm = new System.Windows.Forms.Button();
@@ -46,17 +45,14 @@
             this.btnSleep = new System.Windows.Forms.Button();
             this.btnTreatment = new System.Windows.Forms.Button();
             this.btn_MainBackgroundForm = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.pictureBoxClock = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProgressBar = new System.Windows.Forms.PictureBox();
+            this.lblAgeStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProgressBar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MainBackgroundForm";
             // 
             // btn_Pause
             // 
@@ -121,7 +117,7 @@
             // lblGameTime
             // 
             this.lblGameTime.AutoSize = true;
-            this.lblGameTime.Location = new System.Drawing.Point(624, 44);
+            this.lblGameTime.Location = new System.Drawing.Point(751, 25);
             this.lblGameTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGameTime.Name = "lblGameTime";
             this.lblGameTime.Size = new System.Drawing.Size(10, 13);
@@ -131,7 +127,7 @@
             // lblGameDay
             // 
             this.lblGameDay.AutoSize = true;
-            this.lblGameDay.Location = new System.Drawing.Point(624, 72);
+            this.lblGameDay.Location = new System.Drawing.Point(751, 38);
             this.lblGameDay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGameDay.Name = "lblGameDay";
             this.lblGameDay.Size = new System.Drawing.Size(10, 13);
@@ -211,6 +207,47 @@
             this.btn_MainBackgroundForm.Text = "MainBackgroundForm";
             this.btn_MainBackgroundForm.UseVisualStyleBackColor = true;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(775, 81);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(62, 21);
+            this.lblMessage.TabIndex = 44;
+            this.lblMessage.Text = "label2";
+            // 
+            // pictureBoxClock
+            // 
+            this.pictureBoxClock.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxClock.Image = global::Tamagochi_Nosuha.Properties.Resources.Clock;
+            this.pictureBoxClock.Location = new System.Drawing.Point(728, 0);
+            this.pictureBoxClock.Name = "pictureBoxClock";
+            this.pictureBoxClock.Size = new System.Drawing.Size(140, 66);
+            this.pictureBoxClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxClock.TabIndex = 45;
+            this.pictureBoxClock.TabStop = false;
+            // 
+            // pictureBoxProgressBar
+            // 
+            this.pictureBoxProgressBar.Location = new System.Drawing.Point(519, 997);
+            this.pictureBoxProgressBar.Name = "pictureBoxProgressBar";
+            this.pictureBoxProgressBar.Size = new System.Drawing.Size(943, 52);
+            this.pictureBoxProgressBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProgressBar.TabIndex = 46;
+            this.pictureBoxProgressBar.TabStop = false;
+            // 
+            // lblAgeStatus
+            // 
+            this.lblAgeStatus.AutoSize = true;
+            this.lblAgeStatus.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeStatus.Location = new System.Drawing.Point(519, 970);
+            this.lblAgeStatus.Name = "lblAgeStatus";
+            this.lblAgeStatus.Size = new System.Drawing.Size(62, 21);
+            this.lblAgeStatus.TabIndex = 47;
+            this.lblAgeStatus.Text = "label1";
+            // 
             // MainBackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,14 +255,18 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Game_Background;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.lblAgeStatus);
+            this.Controls.Add(this.pictureBoxProgressBar);
+            this.Controls.Add(this.lblGameDay);
+            this.Controls.Add(this.lblGameTime);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.pictureBoxClock);
             this.Controls.Add(this.btn_MainBackgroundForm);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnFeed);
-            this.Controls.Add(this.lblGameDay);
-            this.Controls.Add(this.lblGameTime);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_BathroomBackgroundForm);
             this.Controls.Add(this.btn_BedroomBackgroundForm);
@@ -233,19 +274,18 @@
             this.Controls.Add(this.btn_GameRoomBackgroundForm);
             this.Controls.Add(this.btn_KitchenBackgroundForm);
             this.Controls.Add(this.btn_Pause);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainBackgroundForm";
             this.Text = "MainBackgroundForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProgressBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Pause;
         private System.Windows.Forms.Button btn_KitchenBackgroundForm;
         private System.Windows.Forms.Button btn_GameRoomBackgroundForm;
@@ -262,5 +302,9 @@
         private System.Windows.Forms.Button btnSleep;
         private System.Windows.Forms.Button btnTreatment;
         private System.Windows.Forms.Button btn_MainBackgroundForm;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.PictureBox pictureBoxClock;
+        private System.Windows.Forms.PictureBox pictureBoxProgressBar;
+        private System.Windows.Forms.Label lblAgeStatus;
     }
 }

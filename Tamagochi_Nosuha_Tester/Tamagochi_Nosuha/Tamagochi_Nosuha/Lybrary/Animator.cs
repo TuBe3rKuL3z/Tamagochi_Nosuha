@@ -135,10 +135,10 @@ namespace AnimationTest2
                 case "old_normal":
                     return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__1_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__2_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__3_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__4_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__5_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__6_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__7_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__8_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__9_, Tamagochi_Nosuha.Properties.Resources.Old_Nosuha__10_ };
                 
-                case "old_bored":
+                /*case "old_bored":
                     return new List<Image> { };
                 case "old_happy":
-                    return new List<Image> { };
+                    return new List<Image> { };*/
 
                 case "dead_dead":
                     return new List<Image> { Tamagochi_Nosuha.Properties.Resources.Grave__1_, Tamagochi_Nosuha.Properties.Resources.Grave__2_, Tamagochi_Nosuha.Properties.Resources.Grave__3_, Tamagochi_Nosuha.Properties.Resources.Grave__4_, Tamagochi_Nosuha.Properties.Resources.Grave__5_, Tamagochi_Nosuha.Properties.Resources.Grave__6_ };

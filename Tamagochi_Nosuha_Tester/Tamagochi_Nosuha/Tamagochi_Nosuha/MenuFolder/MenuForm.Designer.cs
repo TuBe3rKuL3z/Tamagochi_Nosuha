@@ -28,62 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Start = new System.Windows.Forms.Button();
-            this.btn_Setting = new System.Windows.Forms.Button();
-            this.btn_Exit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Start
+            // pictureBox1
             // 
-            this.btn_Start.Location = new System.Drawing.Point(342, 288);
-            this.btn_Start.Name = "btn_Start";
-            this.btn_Start.Size = new System.Drawing.Size(88, 26);
-            this.btn_Start.TabIndex = 0;
-            this.btn_Start.Text = "Start";
-            this.btn_Start.UseVisualStyleBackColor = true;
-            this.btn_Start.Click += new System.EventHandler(this.btn_Start_Click);
+            this.pictureBox1.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Menu;
+            this.pictureBox1.Image = global::Tamagochi_Nosuha.Properties.Resources.play;
+            this.pictureBox1.Location = new System.Drawing.Point(657, 684);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(627, 192);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btn_Setting
+            // pictureBox2
             // 
-            this.btn_Setting.Location = new System.Drawing.Point(342, 320);
-            this.btn_Setting.Name = "btn_Setting";
-            this.btn_Setting.Size = new System.Drawing.Size(88, 26);
-            this.btn_Setting.TabIndex = 1;
-            this.btn_Setting.Text = "Setting";
-            this.btn_Setting.UseVisualStyleBackColor = true;
-            this.btn_Setting.Click += new System.EventHandler(this.btn_Setting_Click);
+            this.pictureBox2.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Menu;
+            this.pictureBox2.Image = global::Tamagochi_Nosuha.Properties.Resources.btnSetting;
+            this.pictureBox2.Location = new System.Drawing.Point(24, 850);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(182, 194);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // btn_Exit
+            // pictureBox3
             // 
-            this.btn_Exit.Location = new System.Drawing.Point(342, 352);
-            this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(88, 26);
-            this.btn_Exit.TabIndex = 2;
-            this.btn_Exit.Text = "Exit";
-            this.btn_Exit.UseVisualStyleBackColor = true;
-            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
+            this.pictureBox3.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Menu;
+            this.pictureBox3.Image = global::Tamagochi_Nosuha.Properties.Resources.btnExit;
+            this.pictureBox3.Location = new System.Drawing.Point(1596, 912);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(288, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Main;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_Exit);
-            this.Controls.Add(this.btn_Setting);
-            this.Controls.Add(this.btn_Start);
+            this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Menu;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Start;
-        private System.Windows.Forms.Button btn_Setting;
-        private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

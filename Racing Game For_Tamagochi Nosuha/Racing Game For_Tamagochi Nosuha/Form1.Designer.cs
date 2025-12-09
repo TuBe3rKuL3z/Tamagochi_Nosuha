@@ -101,7 +101,7 @@
             this.EnemyCar2.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_3;
             this.EnemyCar2.ErrorImage = null;
             this.EnemyCar2.Location = new System.Drawing.Point(421, -240);
-            this.EnemyCar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnemyCar2.Margin = new System.Windows.Forms.Padding(2);
             this.EnemyCar2.Name = "EnemyCar2";
             this.EnemyCar2.Size = new System.Drawing.Size(100, 130);
             this.EnemyCar2.TabIndex = 4;
@@ -114,7 +114,7 @@
             this.EnemyCar1.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_3;
             this.EnemyCar1.ErrorImage = null;
             this.EnemyCar1.Location = new System.Drawing.Point(30, -130);
-            this.EnemyCar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnemyCar1.Margin = new System.Windows.Forms.Padding(2);
             this.EnemyCar1.Name = "EnemyCar1";
             this.EnemyCar1.Size = new System.Drawing.Size(100, 130);
             this.EnemyCar1.TabIndex = 3;
@@ -124,10 +124,9 @@
             // PlayerCar
             // 
             this.PlayerCar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.PlayerCar.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Car_2;
             this.PlayerCar.ErrorImage = null;
             this.PlayerCar.Location = new System.Drawing.Point(202, 481);
-            this.PlayerCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PlayerCar.Margin = new System.Windows.Forms.Padding(2);
             this.PlayerCar.Name = "PlayerCar";
             this.PlayerCar.Size = new System.Drawing.Size(100, 130);
             this.PlayerCar.TabIndex = 1;
@@ -140,7 +139,7 @@
             this.RoadPictureBox.ErrorImage = null;
             this.RoadPictureBox.InitialImage = null;
             this.RoadPictureBox.Location = new System.Drawing.Point(1, 0);
-            this.RoadPictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RoadPictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.RoadPictureBox.Name = "RoadPictureBox";
             this.RoadPictureBox.Size = new System.Drawing.Size(568, 650);
             this.RoadPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +151,7 @@
             this.RoadPictureBox2.BackgroundImage = global::Racing_Game_For_Tamagochi_Nosuha.Properties.Resources.Doroga_2;
             this.RoadPictureBox2.InitialImage = null;
             this.RoadPictureBox2.Location = new System.Drawing.Point(0, -650);
-            this.RoadPictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RoadPictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.RoadPictureBox2.Name = "RoadPictureBox2";
             this.RoadPictureBox2.Size = new System.Drawing.Size(568, 650);
             this.RoadPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +213,7 @@
             this.Controls.Add(this.RoadPictureBox);
             this.Controls.Add(this.RoadPictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RacingGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RacingGame";

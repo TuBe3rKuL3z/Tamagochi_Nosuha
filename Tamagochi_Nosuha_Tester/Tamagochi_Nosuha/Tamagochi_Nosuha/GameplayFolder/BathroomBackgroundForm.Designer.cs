@@ -117,17 +117,18 @@
             // 
             // pictureBoxBathRoom
             // 
-            this.pictureBoxBathRoom.Location = new System.Drawing.Point(288, 80);
+            this.pictureBoxBathRoom.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Bath_Background;
+            this.pictureBoxBathRoom.Location = new System.Drawing.Point(615, 178);
             this.pictureBoxBathRoom.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxBathRoom.Name = "pictureBoxBathRoom";
-            this.pictureBoxBathRoom.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxBathRoom.Size = new System.Drawing.Size(345, 274);
             this.pictureBoxBathRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBathRoom.TabIndex = 24;
             this.pictureBoxBathRoom.TabStop = false;
             // 
             // btnSleep
             // 
-            this.btnSleep.Location = new System.Drawing.Point(462, 382);
+            this.btnSleep.Location = new System.Drawing.Point(458, 771);
             this.btnSleep.Margin = new System.Windows.Forms.Padding(2);
             this.btnSleep.Name = "btnSleep";
             this.btnSleep.Size = new System.Drawing.Size(128, 22);
@@ -137,7 +138,7 @@
             // 
             // btnTreatment
             // 
-            this.btnTreatment.Location = new System.Drawing.Point(330, 382);
+            this.btnTreatment.Location = new System.Drawing.Point(326, 771);
             this.btnTreatment.Margin = new System.Windows.Forms.Padding(2);
             this.btnTreatment.Name = "btnTreatment";
             this.btnTreatment.Size = new System.Drawing.Size(128, 22);
@@ -147,7 +148,7 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(197, 382);
+            this.btnPlay.Location = new System.Drawing.Point(193, 771);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(128, 22);
@@ -157,7 +158,7 @@
             // 
             // btnClean
             // 
-            this.btnClean.Location = new System.Drawing.Point(594, 382);
+            this.btnClean.Location = new System.Drawing.Point(590, 771);
             this.btnClean.Margin = new System.Windows.Forms.Padding(2);
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(128, 22);
@@ -168,7 +169,7 @@
             // 
             // btnFeed
             // 
-            this.btnFeed.Location = new System.Drawing.Point(65, 382);
+            this.btnFeed.Location = new System.Drawing.Point(61, 771);
             this.btnFeed.Margin = new System.Windows.Forms.Padding(2);
             this.btnFeed.Name = "btnFeed";
             this.btnFeed.Size = new System.Drawing.Size(128, 22);
@@ -199,7 +200,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Bath_Background;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_BathroomBackgroundForm);
             this.Controls.Add(this.btnSleep);

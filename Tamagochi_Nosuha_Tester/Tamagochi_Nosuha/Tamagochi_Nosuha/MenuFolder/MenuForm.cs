@@ -10,21 +10,21 @@ namespace Tamagochi_Nosuha
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
         }
-        private void btn_Start_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             MainBackgroundForm mainBackgroundForm = new MainBackgroundForm();
             mainBackgroundForm.ShowDialog();
             this.Close();
         }
 
-        private void btn_Setting_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             SettingForm settingForm = new SettingForm();
             settingForm.ShowDialog();
         }
 
-
-        private void btn_Exit_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

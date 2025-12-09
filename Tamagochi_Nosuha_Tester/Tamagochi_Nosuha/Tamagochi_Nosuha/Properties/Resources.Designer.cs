@@ -63,6 +63,1016 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__14_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Dirty__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Dirty (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Eat__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Eat (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Hungry__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Hungry (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sick__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sick (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__14_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__15_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__16_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (16)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__17_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (17)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__18_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (18)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__19_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (19)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleep__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleep (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Sleepy__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Sleepy (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__14_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__15_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__16_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (16)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__17_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (17)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__18_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (18)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__19_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (19)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Baby_Nosuha_Washes__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Baby_Nosuha_Washes (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bath_Background {
             get {
                 object obj = ResourceManager.GetObject("Bath_Background", resourceCulture);
@@ -83,9 +1093,9 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ch1 {
+        internal static System.Drawing.Bitmap btnContinue {
             get {
-                object obj = ResourceManager.GetObject("Ch1", resourceCulture);
+                object obj = ResourceManager.GetObject("btnContinue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +1103,9 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ch2 {
+        internal static System.Drawing.Bitmap btnExit {
             get {
-                object obj = ResourceManager.GetObject("Ch2", resourceCulture);
+                object obj = ResourceManager.GetObject("btnExit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +1113,39 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ch3 {
+        internal static System.Drawing.Bitmap btnMenu {
             get {
-                object obj = ResourceManager.GetObject("Ch3", resourceCulture);
+                object obj = ResourceManager.GetObject("btnMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnSetting {
+            get {
+                object obj = ResourceManager.GetObject("btnSetting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnSoundOff {
+            get {
+                object obj = ResourceManager.GetObject("btnSoundOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnSoundOn {
+            get {
+                object obj = ResourceManager.GetObject("btnSoundOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,36 +1156,6 @@ namespace Tamagochi_Nosuha.Properties {
         internal static System.Drawing.Bitmap Chamber_Background {
             get {
                 object obj = ResourceManager.GetObject("Chamber_Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dead_1 {
-            get {
-                object obj = ResourceManager.GetObject("dead_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dead_2 {
-            get {
-                object obj = ResourceManager.GetObject("dead_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dead_3 {
-            get {
-                object obj = ResourceManager.GetObject("dead_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +1263,979 @@ namespace Tamagochi_Nosuha.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Dirty__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Dirty (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Eat__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Eat (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Hungry__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Hungry (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sick__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sick (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__14_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__15_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleep__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleep (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Sleepy__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Sleepy (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__10_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (10)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__11_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (11)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__13_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (13)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__14_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (14)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__15_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__16_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (16)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__17_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (17)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__18_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (18)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__19_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (19)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__20_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (20)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__21_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (21)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__22_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (22)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__6_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__7_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__8_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Old_Nosuha_Washes__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Old_Nosuha_Washes (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pause {
             get {
                 object obj = ResourceManager.GetObject("Pause", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

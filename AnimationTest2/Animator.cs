@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace AnimationTest2
@@ -119,6 +120,8 @@ namespace AnimationTest2
 
             currentFrameIndex = (currentFrameIndex + 1) % currentFrames.Count;
             targetPictureBox.Image = currentFrames[currentFrameIndex];
+
+           
         }
 
         public void StopAnimation()

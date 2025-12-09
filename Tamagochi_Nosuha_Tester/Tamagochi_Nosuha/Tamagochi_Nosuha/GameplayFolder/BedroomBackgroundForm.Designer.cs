@@ -168,10 +168,10 @@
             // 
             // pictureBoxBedRoom
             // 
-            this.pictureBoxBedRoom.Location = new System.Drawing.Point(301, 76);
+            this.pictureBoxBedRoom.Location = new System.Drawing.Point(1172, 288);
             this.pictureBoxBedRoom.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxBedRoom.Name = "pictureBoxBedRoom";
-            this.pictureBoxBedRoom.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxBedRoom.Size = new System.Drawing.Size(398, 307);
             this.pictureBoxBedRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBedRoom.TabIndex = 32;
             this.pictureBoxBedRoom.TabStop = false;
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Bedroom_Background;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_BedroomBackgroundForm);
             this.Controls.Add(this.pictureBoxBedRoom);

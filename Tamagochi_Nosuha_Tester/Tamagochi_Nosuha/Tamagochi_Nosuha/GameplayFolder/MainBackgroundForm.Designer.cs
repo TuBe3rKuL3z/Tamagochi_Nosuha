@@ -173,10 +173,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(304, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(754, 467);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(261, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(394, 339);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -216,8 +216,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Main;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Game_Background;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.btn_MainBackgroundForm);
             this.Controls.Add(this.btnSleep);
             this.Controls.Add(this.btnTreatment);

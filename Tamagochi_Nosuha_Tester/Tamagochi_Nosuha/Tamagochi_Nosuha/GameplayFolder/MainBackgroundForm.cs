@@ -1,6 +1,8 @@
 ﻿using AnimationTest2;
 using System;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
@@ -214,9 +216,26 @@ namespace Tamagochi_Nosuha
 
         private void btn_GameRoomBackgroundForm_Click(object sender, EventArgs e)
         {
-            //if (isPetDead) return;
-            //GameRoomBackgroundForm gameRoomForm = new GameRoomBackgroundForm(needSystem, ageSystem, gameTime);
-            //gameRoomForm.ShowDialog();
+            try
+            {
+                string appDirectory = Application.StartupPath;
+                string exeFileName = "Racing Game For_Tamagochi Nosuha.exe";
+
+                string fullPath = Path.Combine(appDirectory, exeFileName);
+
+                if (File.Exists(fullPath))
+                {
+                    Process.Start(fullPath);
+                }
+                else
+                {
+                    MessageBox.Show($"Файл не найден по пути: {fullPath}", "Ошибка запуска", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка при попытке запуска: {ex.Message}", "Критическая ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)

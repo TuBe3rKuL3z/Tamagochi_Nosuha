@@ -168,10 +168,10 @@
             // 
             // pictureBoxKitchen
             // 
-            this.pictureBoxKitchen.Location = new System.Drawing.Point(283, 100);
+            this.pictureBoxKitchen.Location = new System.Drawing.Point(624, 597);
             this.pictureBoxKitchen.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxKitchen.Name = "pictureBoxKitchen";
-            this.pictureBoxKitchen.Size = new System.Drawing.Size(232, 179);
+            this.pictureBoxKitchen.Size = new System.Drawing.Size(450, 351);
             this.pictureBoxKitchen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxKitchen.TabIndex = 22;
             this.pictureBoxKitchen.TabStop = false;
@@ -199,7 +199,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tamagochi_Nosuha.Properties.Resources.Kitchen_Background;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.btn_KitchenBackgroundForm);
             this.Controls.Add(this.pictureBoxKitchen);

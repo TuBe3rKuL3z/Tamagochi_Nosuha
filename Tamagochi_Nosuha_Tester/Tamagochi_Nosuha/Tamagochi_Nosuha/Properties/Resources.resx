@@ -1087,4 +1087,247 @@
   <data name="Clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Standart_Nosuha_Bored (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (14)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Bored (16)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Bored (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Standart_Nosuha_Happy (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Standart_Nosuha_Happy (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (16)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (14)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Bored (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Bored (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Old_Nosuha_Happy (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Old_Nosuha_Happy (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (12)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Bored (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Bored (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Baby_Nosuha_Happy (10)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Baby_Nosuha_Happy (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

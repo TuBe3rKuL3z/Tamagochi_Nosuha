@@ -8,25 +8,49 @@ namespace Tamagochi_Nosuha
 
         public Age CurrentAge { get; private set; }
         public int Progress { get; private set; }
-        public int MaxProgress => 10;
+        public int MaxProgress => 10; // 10 прогресс-баров
 
-        // Флаг празднования (блокирует добавление прогресса)
+        // Для подсчета действий
+        public int ActionCounter { get; private set; }
+        public int ActionsNeeded => 3; // 3 действия = 1 прогресс
+
         public bool IsCelebrating { get; private set; }
 
-        // Существующие события
+        // События
         public event Action<Age> OnAgeChanged;
         public event Action<int> OnProgressChanged;
-
-        // НОВОЕ: Событие достижения максимума прогресса
+        public event Action<int, int> OnActionCounterChanged; // 1/3, 2/3, 3/3
         public event Action OnProgressMaxReached;
 
         public AgeSystem()
         {
             CurrentAge = Age.Baby;
             Progress = 0;
+            ActionCounter = 0;
             IsCelebrating = false;
         }
 
+        /// <summary>
+        /// Добавляет одно действие (3 действия = 1 прогресс)
+        /// </summary>
+        public void AddAction()
+        {
+            if (CurrentAge == Age.Dead || IsCelebrating) return;
+
+            ActionCounter++;
+            OnActionCounterChanged?.Invoke(ActionCounter, ActionsNeeded);
+
+            if (ActionCounter >= ActionsNeeded)
+            {
+                ActionCounter = 0;
+                AddProgress(1);
+                OnActionCounterChanged?.Invoke(ActionCounter, ActionsNeeded); // Сбрасываем счетчик в UI
+            }
+        }
+
+        /// <summary>
+        /// Прямое добавление прогресса (использовать осторожно)
+        /// </summary>
         public void AddProgress(int amount = 1)
         {
             if (CurrentAge == Age.Dead || IsCelebrating) return;
@@ -34,27 +58,29 @@ namespace Tamagochi_Nosuha
             int oldProgress = Progress;
             Progress += amount;
 
-            // Уведомляем об изменении прогресса
             OnProgressChanged?.Invoke(Progress);
 
-            // Проверяем, достигли ли максимума
             if (Progress >= MaxProgress)
             {
-                Progress = MaxProgress; // Фиксируем на максимуме
-                IsCelebrating = true;   // Начинаем празднование
-                OnProgressMaxReached?.Invoke(); // Уведомляем
+                Progress = MaxProgress;
+                IsCelebrating = true;
+                OnProgressMaxReached?.Invoke();
             }
         }
 
-        // НОВЫЙ МЕТОД: Переход к следующему возрасту (после празднования)
+        /// <summary>
+        /// Переход к следующему возрасту (после празднования)
+        /// </summary>
         public void AdvanceToNextAge()
         {
             if (!IsCelebrating || CurrentAge == Age.Dead) return;
 
-            Progress = 0; // Сбрасываем прогресс
-            IsCelebrating = false; // Заканчиваем празднование
+            Progress = 0;
+            ActionCounter = 0;
+            IsCelebrating = false;
 
-            NextAge(); // Переходим к следующему возрасту
+            NextAge();
+            OnActionCounterChanged?.Invoke(ActionCounter, ActionsNeeded); // Обновляем UI
         }
 
         private void NextAge()
@@ -69,15 +95,13 @@ namespace Tamagochi_Nosuha
                     break;
                 case Age.Old:
                     CurrentAge = Age.Dead;
-                    // Вызываем событие смерти от старости
                     OnAgeChanged?.Invoke(CurrentAge);
-                    return; // Прерываем
+                    return;
             }
 
             OnAgeChanged?.Invoke(CurrentAge);
         }
 
-        // Метод для принудительной установки смерти (от болезни)
         public void SetDead()
         {
             if (CurrentAge != Age.Dead)
@@ -85,27 +109,15 @@ namespace Tamagochi_Nosuha
                 CurrentAge = Age.Dead;
                 IsCelebrating = false;
                 OnProgressChanged?.Invoke(Progress);
+                OnActionCounterChanged?.Invoke(ActionCounter, ActionsNeeded);
             }
         }
 
-        // НОВЫЙ МЕТОД: Принудительно закончить празднование (на случай багов)
         public void CancelCelebration()
         {
             IsCelebrating = false;
         }
 
-        public void AddRandomProgress()
-        {
-            Random rnd = new Random();
-            int actions = rnd.Next(3, 6); // 3-5 действий
-
-            for (int i = 0; i < actions; i++)
-            {
-                AddProgress();
-            }
-        }
-
-        // НОВЫЙ МЕТОД: Получение текста возраста
         public string GetAgeText()
         {
             switch (CurrentAge)
@@ -115,6 +127,18 @@ namespace Tamagochi_Nosuha
                 case Age.Old: return "Пожилой";
                 case Age.Dead: return "Мертв";
                 default: return "Неизвестно";
+            }
+        }
+
+        // Старый метод для обратной совместимости
+        public void AddRandomProgress()
+        {
+            Random rnd = new Random();
+            int actions = rnd.Next(3, 6);
+
+            for (int i = 0; i < actions; i++)
+            {
+                AddAction();
             }
         }
     }

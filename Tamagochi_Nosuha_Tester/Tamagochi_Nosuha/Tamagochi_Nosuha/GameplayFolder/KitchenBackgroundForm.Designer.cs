@@ -66,7 +66,7 @@
             this.btn_BathroomBackgroundForm.Name = "btn_BathroomBackgroundForm";
             this.btn_BathroomBackgroundForm.Size = new System.Drawing.Size(163, 30);
             this.btn_BathroomBackgroundForm.TabIndex = 13;
-            this.btn_BathroomBackgroundForm.Text = "BathroomBackgroundForm";
+            this.btn_BathroomBackgroundForm.Text = "Ванная";
             this.btn_BathroomBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_BathroomBackgroundForm.Click += new System.EventHandler(this.btn_BathroomBackgroundForm_Click);
             // 
@@ -76,7 +76,7 @@
             this.btn_BedroomBackgroundForm.Name = "btn_BedroomBackgroundForm";
             this.btn_BedroomBackgroundForm.Size = new System.Drawing.Size(163, 30);
             this.btn_BedroomBackgroundForm.TabIndex = 12;
-            this.btn_BedroomBackgroundForm.Text = "BedroomBackgroundForm";
+            this.btn_BedroomBackgroundForm.Text = "Спальня";
             this.btn_BedroomBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_BedroomBackgroundForm.Click += new System.EventHandler(this.btn_BedroomBackgroundForm_Click);
             // 
@@ -86,7 +86,7 @@
             this.btn_ChamberBackgroundForm.Name = "btn_ChamberBackgroundForm";
             this.btn_ChamberBackgroundForm.Size = new System.Drawing.Size(163, 30);
             this.btn_ChamberBackgroundForm.TabIndex = 11;
-            this.btn_ChamberBackgroundForm.Text = "ChamberBackgroundForm";
+            this.btn_ChamberBackgroundForm.Text = "Больница";
             this.btn_ChamberBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_ChamberBackgroundForm.Click += new System.EventHandler(this.btn_ChamberBackgroundForm_Click);
             // 
@@ -96,7 +96,7 @@
             this.btn_GameRoomBackgroundForm.Name = "btn_GameRoomBackgroundForm";
             this.btn_GameRoomBackgroundForm.Size = new System.Drawing.Size(163, 30);
             this.btn_GameRoomBackgroundForm.TabIndex = 10;
-            this.btn_GameRoomBackgroundForm.Text = "GameRoomBackgroundForm";
+            this.btn_GameRoomBackgroundForm.Text = "Игра";
             this.btn_GameRoomBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_GameRoomBackgroundForm.Click += new System.EventHandler(this.btn_GameRoomBackgroundForm_Click);
             // 
@@ -106,7 +106,7 @@
             this.btn_MainBackgroundForm.Name = "btn_MainBackgroundForm";
             this.btn_MainBackgroundForm.Size = new System.Drawing.Size(163, 30);
             this.btn_MainBackgroundForm.TabIndex = 8;
-            this.btn_MainBackgroundForm.Text = "MainBackgroundForm";
+            this.btn_MainBackgroundForm.Text = "Главная";
             this.btn_MainBackgroundForm.UseVisualStyleBackColor = true;
             this.btn_MainBackgroundForm.Click += new System.EventHandler(this.btn_MainBackgroundForm_Click);
             // 
@@ -177,7 +177,7 @@
             this.btn_KitchenBackgroundForm.Name = "btn_KitchenBackgroundForm";
             this.btn_KitchenBackgroundForm.Size = new System.Drawing.Size(163, 30);
             this.btn_KitchenBackgroundForm.TabIndex = 23;
-            this.btn_KitchenBackgroundForm.Text = "KitchenBackgroundForm";
+            this.btn_KitchenBackgroundForm.Text = "Кухня";
             this.btn_KitchenBackgroundForm.UseVisualStyleBackColor = true;
             // 
             // lblMessage

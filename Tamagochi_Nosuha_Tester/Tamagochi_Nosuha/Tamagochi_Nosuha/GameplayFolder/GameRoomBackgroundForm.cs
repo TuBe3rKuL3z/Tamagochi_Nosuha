@@ -72,5 +72,7 @@ namespace Tamagochi_Nosuha
         }
 
         #endregion
+
+
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Tamagochi_Nosuha.Properties;
 
 namespace Tamagochi_Nosuha
 {
@@ -10,6 +11,7 @@ namespace Tamagochi_Nosuha
         private AgeSystem ageSystem;
         private PictureBox progressPictureBox;
         private Label ageLabel;
+        private Label actionLabel; // Для отображения действий (1/3, 2/3, 3/3)
         private Timer celebrationTimer;
 
         // Для анимации счастья
@@ -17,96 +19,84 @@ namespace Tamagochi_Nosuha
         private PictureBox petPictureBox;
         private Timer happinessAnimationTimer;
 
-        // Изображения прогресс-баров (добавятся в Resources)
+        // Изображения прогресс-баров (0-10)
         private Image[] progressBarImages;
 
         public AgeProgressManager(AgeSystem ageSystem, PictureBox progressBox, Label label,
-                                  Animator animator = null, PictureBox petBox = null)
+                                  Label actionLabel = null, Animator animator = null,
+                                  PictureBox petBox = null)
         {
             this.ageSystem = ageSystem;
             this.progressPictureBox = progressBox;
             this.ageLabel = label;
+            this.actionLabel = actionLabel;
             this.animator = animator;
             this.petPictureBox = petBox;
 
             Initialize();
-            LoadProgressBarImages();
+            LoadProgressBarImagesFromResources();
 
             // Подписываемся на события
             ageSystem.OnProgressChanged += OnProgressChanged;
+            ageSystem.OnActionCounterChanged += OnActionCounterChanged;
             ageSystem.OnProgressMaxReached += OnProgressMaxReached;
             ageSystem.OnAgeChanged += OnAgeChanged;
         }
 
         private void Initialize()
         {
-            // Таймер для задержки 2 секунды перед анимацией счастья
             celebrationTimer = new Timer();
             celebrationTimer.Interval = 2000; // 2 секунды
             celebrationTimer.Tick += OnCelebrationTimerTick;
 
-            // Таймер для анимации счастья
             happinessAnimationTimer = new Timer();
             happinessAnimationTimer.Interval = 3000; // 3 секунды анимации
             happinessAnimationTimer.Tick += OnHappinessAnimationComplete;
 
-            // Обновляем начальное состояние
             UpdateProgressDisplay();
+            UpdateActionCounterDisplay();
         }
 
-        private void LoadProgressBarImages()
+        private void LoadProgressBarImagesFromResources()
         {
-            // Загружаем 10 изображений прогресс-баров из Resources
             progressBarImages = new Image[11]; // 0-10
-
             try
             {
-                // Загружаем базовые изображения (замените на ваши имена)
-                var resources = Properties.Resources.ResourceManager;
-
-                for (int i = 0; i <= 10; i++)
-                {
-                    string resourceName = $"progress_bar_{i}";
-                    var image = (Image)resources.GetObject(resourceName);
-
-                    if (image != null)
-                    {
-                        progressBarImages[i] = image;
-                    }
-                    else
-                    {
-                        // Запасной вариант: создаем простой бар
-                        progressBarImages[i] = CreateSimpleProgressBar(i);
-                    }
-                }
+                // Загружаем изображения по вашим именам
+                // Progress_Bar__1_, Progress_Bar__2_, и т.д.
+                progressBarImages[1] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__1_ ?? CreateFallbackImage(1, 10);
+                progressBarImages[2] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__2_ ?? CreateFallbackImage(2, 10);
+                progressBarImages[3] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__3_ ?? CreateFallbackImage(3, 10); 
+                progressBarImages[4] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__4_ ?? CreateFallbackImage(4, 10);
+                progressBarImages[5] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__5_ ?? CreateFallbackImage(5, 10);
+                progressBarImages[6] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__6_ ?? CreateFallbackImage(6, 10);
+                progressBarImages[7] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__7_ ?? CreateFallbackImage(7, 10);
+                progressBarImages[8] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__8_ ?? CreateFallbackImage(8, 10);
+                progressBarImages[9] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__9_ ?? CreateFallbackImage(9, 10);
+                progressBarImages[10] = Tamagochi_Nosuha.Properties.Resources.Progress_Bar__10_ ?? CreateFallbackImage(10, 10);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Если не удалось загрузить, создаем простые бары
+                MessageBox.Show($"Ошибка загрузки прогресс-баров: {ex.Message}");
+
                 for (int i = 0; i <= 10; i++)
                 {
-                    progressBarImages[i] = CreateSimpleProgressBar(i);
+                    progressBarImages[i] = CreateFallbackImage(i, 10);
                 }
             }
         }
 
-        private Image CreateSimpleProgressBar(int progress)
+        private Image CreateFallbackImage(int progress, int max)
         {
             Bitmap bmp = new Bitmap(200, 30);
             using (Graphics g = Graphics.FromImage(bmp))
             {
-                // Фон
-                g.FillRectangle(Brushes.LightGray, 0, 0, 200, 30);
+                g.Clear(Color.LightGray);
 
-                // Прогресс
-                int width = (int)(200 * (progress / 10.0));
+                int width = (int)(200 * (progress / (float)max));
                 g.FillRectangle(Brushes.Blue, 0, 0, width, 30);
-
-                // Рамка
                 g.DrawRectangle(Pens.Black, 0, 0, 199, 29);
-
-                // Текст прогресса
-                g.DrawString($"{progress}/10", SystemFonts.DefaultFont, Brushes.Black, 80, 8);
+                g.DrawString($"{progress}/{max}", SystemFonts.DefaultFont, Brushes.Black, 80, 8);
             }
             return bmp;
         }
@@ -119,13 +109,14 @@ namespace Tamagochi_Nosuha
                 return;
             }
 
-            // Обновляем PictureBox с прогресс-баром
+            // Обновляем PictureBox с прогресс-баром (0-10)
             if (progressPictureBox != null && progressBarImages != null)
             {
                 int progress = ageSystem.Progress;
-                if (progress >= 0 && progress <= 10)
+                if (progress >= 0 && progress <= 10 && progressBarImages[progress] != null)
                 {
                     progressPictureBox.Image = progressBarImages[progress];
+                    progressPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
 
@@ -134,9 +125,42 @@ namespace Tamagochi_Nosuha
             {
                 string ageText = ageSystem.GetAgeText();
                 ageLabel.Text = $"{ageText} ({ageSystem.Progress}/{ageSystem.MaxProgress})";
-
-                // Меняем цвет текста при праздновании
                 ageLabel.ForeColor = ageSystem.IsCelebrating ? Color.Green : Color.Black;
+                ageLabel.Font = new Font(ageLabel.Font,
+                    ageSystem.IsCelebrating ? FontStyle.Bold : FontStyle.Regular);
+            }
+        }
+
+        private void UpdateActionCounterDisplay()
+        {
+            if (actionLabel != null && actionLabel.InvokeRequired)
+            {
+                actionLabel.Invoke(new Action(UpdateActionCounterDisplay));
+                return;
+            }
+
+            if (actionLabel != null)
+            {
+                if (ageSystem.CurrentAge == AgeSystem.Age.Dead || ageSystem.IsCelebrating)
+                {
+                    actionLabel.Text = "";
+                    actionLabel.Visible = false;
+                }
+                else
+                {
+                    actionLabel.Text = $"Действия: {ageSystem.ActionCounter}/{ageSystem.ActionsNeeded}";
+                    actionLabel.Visible = true;
+
+                    // Меняем цвет в зависимости от заполнения
+                    if (ageSystem.ActionCounter == 0)
+                        actionLabel.ForeColor = Color.Gray;
+                    else if (ageSystem.ActionCounter == 1)
+                        actionLabel.ForeColor = Color.Orange;
+                    else if (ageSystem.ActionCounter == 2)
+                        actionLabel.ForeColor = Color.OrangeRed;
+                    else
+                        actionLabel.ForeColor = Color.Green;
+                }
             }
         }
 
@@ -145,20 +169,27 @@ namespace Tamagochi_Nosuha
             UpdateProgressDisplay();
         }
 
+        private void OnActionCounterChanged(int current, int needed)
+        {
+            UpdateActionCounterDisplay();
+        }
+
         private void OnProgressMaxReached()
         {
-            // Блокируем UI на время празднования
-            SetUIEnabled(false);
+            if (ageSystem.Progress != 10) return;
 
-            // Показываем полный бар 2 секунды
+            UpdateProgressDisplay();
+
+            // Запускаем таймер 2 секунды
             celebrationTimer.Start();
+
+            // Звуковой эффект
+            System.Media.SystemSounds.Exclamation.Play();
         }
 
         private void OnCelebrationTimerTick(object sender, EventArgs e)
         {
             celebrationTimer.Stop();
-
-            // Запускаем анимацию счастья
             PlayHappinessAnimation();
         }
 
@@ -168,10 +199,36 @@ namespace Tamagochi_Nosuha
             {
                 string ageStr = ageSystem.CurrentAge.ToString().ToLower();
                 animator.PlayAnimation(ageStr, "happy");
-            }
 
-            // Запускаем таймер завершения анимации
-            happinessAnimationTimer.Start();
+                // Эффект мигания для actionLabel
+                if (actionLabel != null)
+                {
+                    Timer blinkTimer = new Timer();
+                    blinkTimer.Interval = 200;
+                    int blinkCount = 0;
+
+                    blinkTimer.Tick += (s, e) => {
+                        blinkCount++;
+                        actionLabel.ForeColor = blinkCount % 2 == 0 ? Color.Green : Color.Gold;
+
+                        if (blinkCount >= 6)
+                        {
+                            blinkTimer.Stop();
+                            blinkTimer.Dispose();
+                            happinessAnimationTimer.Start();
+                        }
+                    };
+                    blinkTimer.Start();
+                }
+                else
+                {
+                    happinessAnimationTimer.Start();
+                }
+            }
+            else
+            {
+                happinessAnimationTimer.Start();
+            }
         }
 
         private void OnHappinessAnimationComplete(object sender, EventArgs e)
@@ -181,36 +238,61 @@ namespace Tamagochi_Nosuha
             // Переходим к следующему возрасту
             ageSystem.AdvanceToNextAge();
 
-            // Разблокируем UI
-            SetUIEnabled(true);
-
-            // Обновляем отображение (уже с новым возрастом)
             UpdateProgressDisplay();
+            UpdateActionCounterDisplay();
+
+            ShowNewAgeMessage();
+        }
+
+        private void ShowNewAgeMessage()
+        {
+            if (ageLabel == null) return;
+
+            string message;
+
+            if (ageSystem.CurrentAge == AgeSystem.Age.Adult)
+            {
+                message = "Питомец вырос! Теперь он Взрослый!";
+            }
+            else if (ageSystem.CurrentAge == AgeSystem.Age.Old)
+            {
+                message = "Питомец стал Пожилым. Будьте внимательнее!";
+            }
+            else
+            {
+                message = "Возраст изменен!";
+            }
+
+            string originalText = ageLabel.Text;
+            ageLabel.Text = message;
+            ageLabel.ForeColor = Color.DarkBlue;
+
+            Timer messageTimer = new Timer();
+            messageTimer.Interval = 2000;
+            messageTimer.Tick += (s, e) => {
+                messageTimer.Stop();
+                messageTimer.Dispose();
+                UpdateProgressDisplay();
+            };
+            messageTimer.Start();
         }
 
         private void OnAgeChanged(AgeSystem.Age newAge)
         {
             UpdateProgressDisplay();
-        }
-
-        private void SetUIEnabled(bool enabled)
-        {
-            // Этот метод нужно будет доработать в MainBackgroundForm
-            // Пока просто обновляем отображение
-            UpdateProgressDisplay();
+            UpdateActionCounterDisplay();
         }
 
         public void Cleanup()
         {
-            // Отписываемся от событий
             if (ageSystem != null)
             {
                 ageSystem.OnProgressChanged -= OnProgressChanged;
+                ageSystem.OnActionCounterChanged -= OnActionCounterChanged;
                 ageSystem.OnProgressMaxReached -= OnProgressMaxReached;
                 ageSystem.OnAgeChanged -= OnAgeChanged;
             }
 
-            // Останавливаем таймеры
             celebrationTimer?.Stop();
             happinessAnimationTimer?.Stop();
 

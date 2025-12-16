@@ -1,12 +1,15 @@
 ﻿using AnimationTest2;
 using System;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Tamagochi_Nosuha
 {
     public partial class BathroomBackgroundForm : Form
     {
+        private AgeProgressManager ageProgressManager;
 
         private NeedSystem needSystem;
         private AgeSystem ageSystem;
@@ -31,7 +34,15 @@ namespace Tamagochi_Nosuha
             // Подписываемся на события
             this.needSystem.OnStatusesChanged += OnStatusesChanged;
             this.ageSystem.OnAgeChanged += OnAgeChanged;
+
+            ageProgressManager = new AgeProgressManager(
+            ageSystem,
+            pictureBoxProgressBar,
+            labelAgeStatus
+        );
         }
+
+
 
         // Обновление анимации на кухне
         private void UpdateBathRoomAnimation()
@@ -93,9 +104,26 @@ namespace Tamagochi_Nosuha
 
         private void btn_GameRoomBackgroundForm_Click(object sender, EventArgs e)
         {
-            //GameRoomBackgroundForm gameRoomBackgroundForm = new GameRoomBackgroundForm();
-            //gameRoomBackgroundForm.ShowDialog();
-            //this.Close();
+            try
+            {
+                string appDirectory = Application.StartupPath;
+                string exeFileName = "Racing Game For_Tamagochi Nosuha.exe";
+
+                string fullPath = Path.Combine(appDirectory, exeFileName);
+
+                if (File.Exists(fullPath))
+                {
+                    Process.Start(fullPath);
+                }
+                else
+                {
+                    MessageBox.Show($"Файл не найден по пути: {fullPath}", "Ошибка запуска", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка при попытке запуска: {ex.Message}", "Критическая ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_ChamberBackgroundForm_Click(object sender, EventArgs e)
@@ -144,9 +172,9 @@ namespace Tamagochi_Nosuha
         // При закрытии формы отписываемся от событий
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
-            needSystem.OnStatusesChanged -= OnStatusesChanged;
-            ageSystem.OnAgeChanged -= OnAgeChanged;
+            ageProgressManager?.Cleanup();
             base.OnFormClosed(e);
         }
+
     }
 }

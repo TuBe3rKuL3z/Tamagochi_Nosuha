@@ -32,13 +32,15 @@ namespace Tamagochi_Nosuha
             animator = new Animator(pictureBox1);
 
             // Создаем менеджер прогресса
-            // Предполагается, что на форме есть:
-            // - pictureBoxProgressBar (для прогресс-бара)
-            // - lblAgeStatus (для текста возраста)
+            // На форме должны быть:
+            // - pictureBoxProgressBar (PictureBox для прогресс-бара)
+            // - lblAgeStatus (Label для текста возраста)  
+            // - lblActionCounter (Label для счетчика действий 1/3, 2/3, 3/3) - ОПЦИОНАЛЬНО
             ageProgressManager = new AgeProgressManager(
                 ageSystem,
                 pictureBoxProgressBar,
                 lblAgeStatus,
+                lblActionCounter, // Может быть null если не нужен
                 animator,
                 pictureBox1
             );
@@ -50,14 +52,11 @@ namespace Tamagochi_Nosuha
             needSystem.OnDeathFromSickness += OnDeathFromSickness;
             needSystem.OnActionCompleted += OnNeedSystemActionCompleted;
 
-            // Запускаем первую анимацию
             UpdateAnimation();
-
-            // Запускаем системы
             gameTime.StartTime();
             needSystem.StartNeeds();
-
         }
+
 
         //Обновление блокировки UI
 
@@ -93,8 +92,12 @@ namespace Tamagochi_Nosuha
         //Завершение действий
         private void OnNeedSystemActionCompleted()
         {
-            ageSystem.AddProgress(); // Прогресс ТОЛЬКО после завершения действия
+            if (!isPetDead && !ageSystem.IsCelebrating)
+            {
+                ageSystem.AddAction(); // 3 действия = +1 к прогрессу
+            }
         }
+
 
         // Время
         private void UpdateTimeDisplay(string time, string timeOfDay)
